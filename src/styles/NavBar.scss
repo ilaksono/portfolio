@@ -1,0 +1,11 @@
+@import './helpers';
+
+.nav-container {
+  @include flexbox(row, space-between, center);
+  height: 60px;
+  background-color: rgb(71, 13, 52);
+  border: 2px solid grey;
+  color: white;
+}
+
+

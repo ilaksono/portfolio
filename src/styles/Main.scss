@@ -1,0 +1,35 @@
+@import './helpers.scss';
+
+.main-layout {
+  @include flexbox(row, flex-start, center);
+  background-color: rgb(234, 253, 226);
+  height: calc(100vh - 60px);
+  width: 100vw;
+}
+
+.work-layout {
+  width: 35%;
+  border: 2px solid black;
+  height: 100%;
+  background-color: rgb(174, 149, 184);
+  color: rgb(38, 38, 56);
+  @include flexbox(column, center, space-between);
+  padding-left: 20px;
+}
+.projects-layout {
+  width: 45%;
+  border: 2px solid grey;
+  height: 100%;
+}
+.work-image {
+  height: 75px;
+  border-radius: 50%;
+}
+.work-item-container {
+  @include flexbox(row, space-between, center);
+  width: 300px;
+  text-align: right;
+}
+.work-header {
+  margin-bottom: 100px;
+}

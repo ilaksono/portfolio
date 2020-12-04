@@ -1,0 +1,34 @@
+@import './helpers.scss';
+
+.profile-layout {
+  background-color: beige;
+  height: calc(100vh - 60px);
+  padding: 100px;
+  @include flexbox(column, flex-start, space-around);
+}
+
+.prof-pic-container {
+}
+
+.prof-pic {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+.background-pic {
+  height: 200px;
+  width: 220px;
+  border-radius: 10%;
+  cursor: pointer;
+}
+.pic-container {
+  @include flexbox(row, space-around, center)
+}
+
+.anecdote {
+  width: 80%;
+  text-align: left;
+  @include flexbox(column, flex-start, center);
+  margin-left: 100px;
+}
