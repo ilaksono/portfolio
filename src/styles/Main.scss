@@ -2,24 +2,31 @@
 
 .main-layout {
   @include flexbox(row, flex-start, center);
-  background-color: rgb(234, 253, 226);
+  background-color: rgb(161, 201, 219);
   height: calc(100vh - 60px);
   width: 100vw;
 }
 
 .work-layout {
-  width: 35%;
+  width: 30%;
   border: 2px solid black;
   height: 100%;
-  background-color: rgb(174, 149, 184);
+  background-color: $lightp;
   color: rgb(38, 38, 56);
-  @include flexbox(column, center, space-between);
-  padding-left: 20px;
+  @include flexbox(column, flex-start, center);
 }
 .projects-layout {
-  width: 45%;
+  width: 50%;
   border: 2px solid grey;
   height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 4px;
+}
+.main-title {
+  text-align: center;
+  margin-bottom: 35px;
+  margin-top: 40px;
 }
 .work-image {
   height: 75px;
@@ -33,7 +40,42 @@
   @include flexbox(row, space-between, center);
   width: 300px;
   text-align: right;
+  margin-bottom: 35px;
 }
 .work-header {
   margin-bottom: 100px;
+}
+
+.projects-iframe {
+  width: 80%;
+  min-height: 280px;
+}
+.jungle-screen {
+  width: 410px;
+  height: 200px;
+}
+.each-project {
+  width: 100%;
+  @include flexbox(column, flex-start, center);
+  margin-bottom: 35px;
+}
+
+.projects-layout::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.projects-layout::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.projects-layout::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  // outline: 1px solid slategrey;
+  border-radius: 30%;
+
+}
+.projects-label {
+  cursor: pointer;
+  color: $lightp;
+  font-size: 18px;
 }

@@ -29,7 +29,7 @@ const Work = () => {
 
   return (
     <div className='work-layout'>
-      <h2 className='work-header'>
+      <h2 className='main-title'>
 
       With Companies:
       </h2>

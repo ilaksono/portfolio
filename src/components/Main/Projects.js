@@ -1,29 +1,46 @@
 const projectsArr = [
   {
-    url: 'ianspace.laksono.net',
+    url: 'https://safespace-a.netlify.app/',
     title: 'SafeSpace - React & Google/Yelp APIs'
   },
   {
-    url: 'ian.laksono.net',
+    url: 'http://tiny-app-291120.uk.r.appspot.com/register',
     title: 'Battleship - JQuery & Express'
   },
   {
-    url: 'scheduler-laksono.netlify.app',
+    url: 'https://scheduler-laksono.netlify.app/',
     title: 'Scheduler - React & Express'
-  },
-  {
-    url: 'https://media.glassdoor.com/sqll/10840/amec-foster-wheeler-squarelogo-1432286081401.png',
-    title: 'Amec Foster Wheeler'
   }
 
-]
+];
 
 const Projects = () => {
+
+  const parsedProjs = projectsArr.map((proj, index) => {
+    return (
+      <div className='each-project'>
+        <iframe title={proj.title} key={index} className='projects-iframe' src={proj.url}>
+
+        </iframe>
+        <a href={proj.url} className='projects-label'>
+          {proj.title}
+        </a>
+      </div>
+    );
+  });
 
   return (
     <div className='projects-layout'>
 
-      I AM Projects
+      <h2 className='main-title'>
+        My Projects:
+        </h2>
+      {parsedProjs}
+      <div className='each-project'>
+
+      <img src='/jungle.png' alt='jungle' className='jungle-screen'></img>
+      <a className='projects-label' href='https://github.com/ilaksono/jungle-rails'>Jungle - Ruby on Rails</a>
+      </div>
     </div>
   );
 };
