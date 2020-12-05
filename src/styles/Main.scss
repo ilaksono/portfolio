@@ -2,31 +2,47 @@
 
 .main-layout {
   @include flexbox(row, flex-start, center);
-  background-color: rgb(161, 201, 219);
-  height: calc(100vh - 60px);
+  background-color: $white;
+  height: calc(100vh - 70px);
   width: 100vw;
 }
 
 .work-layout {
-  width: 30%;
-  border: 2px solid black;
+  width: 25%;
   height: 100%;
-  background-color: $lightp;
+  background-color: $lightb;
   color: rgb(38, 38, 56);
   @include flexbox(column, flex-start, center);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: default;
+
 }
 .projects-layout {
   width: 50%;
-  border: 2px solid grey;
   height: 100%;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-padding-top: 4px;
 }
+.specialty-layout {
+  @include flexbox(column, flex-start, center);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 4px;
+  height: calc(100vh - 70px);
+  width: 25%;
+  background-color: $lightb;
+}
 .main-title {
   text-align: center;
   margin-bottom: 35px;
   margin-top: 40px;
+  color: rgb(32, 6, 53);
+  font-weight: bold;
 }
 .work-image {
   height: 75px;
@@ -38,7 +54,7 @@
 }
 .work-item-container {
   @include flexbox(row, space-between, center);
-  width: 300px;
+  width: 100%;
   text-align: right;
   margin-bottom: 35px;
 }
@@ -51,8 +67,8 @@
   min-height: 280px;
 }
 .jungle-screen {
-  width: 410px;
-  height: 200px;
+  width: 80%;
+  height: 260px;
 }
 .each-project {
   width: 100%;
@@ -60,22 +76,18 @@
   margin-bottom: 35px;
 }
 
-.projects-layout::-webkit-scrollbar {
-  width: 1em;
-}
- 
-.projects-layout::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
- 
-.projects-layout::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  // outline: 1px solid slategrey;
-  border-radius: 30%;
-
+.skill-item {
+  margin: 15px;
 }
 .projects-label {
   cursor: pointer;
-  color: $lightp;
+  color: rgb(55, 14, 102);
+  font-weight: bold;
   font-size: 18px;
+  margin-top: 10px;
+}
+.skill-logo {
+  max-width: 100px;
+  max-height: 100px;
+  background-color: $lightb;
 }

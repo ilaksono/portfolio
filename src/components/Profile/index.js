@@ -41,7 +41,7 @@ const Profile = () => {
       }
       <div className='anecdote'>
         <h4>
-          I am a full stack web developer, I play piano and love snowboarding.
+         A full stack web developer, who plays piano and loves snowboarding.
         </h4>
       </div>
 

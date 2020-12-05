@@ -1,0 +1,45 @@
+@import './helpers.scss';
+
+.specialty-layout::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.specialty-layout::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.specialty-layout::-webkit-scrollbar-thumb {
+  background-color:$lightb;
+  // outline: 1px solid slategrey;
+  border: 1px solid rgb(70, 145, 158);
+  border-radius: 10px;
+
+}
+.projects-layout::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.projects-layout::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.projects-layout::-webkit-scrollbar-thumb {
+  background-color: $lightp;
+  // outline: 1px solid slategrey;
+  border: 1px solid rgb(74, 28, 128);
+  border-radius: 10px;
+}
+.work-layout::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.work-layout::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.work-layout::-webkit-scrollbar-thumb {
+  background-color:$lightb;
+  // outline: 1px solid slategrey;
+  border: 1px solid rgb(70, 145, 158);
+  border-radius: 10px;
+}

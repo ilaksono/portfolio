@@ -1,8 +1,8 @@
 @import './helpers.scss';
 
 .profile-layout {
-  background-color: beige;
-  height: calc(100vh - 60px);
+  background-color: $white;
+  height: calc(100vh - 70px);
   padding: 100px;
   @include flexbox(column, flex-start, space-around);
 }
@@ -31,4 +31,6 @@
   text-align: left;
   @include flexbox(column, flex-start, center);
   margin-left: 100px;
+  margin-top: 35px;
+  
 }

@@ -1,0 +1,24 @@
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes bounce { 
+  from {transform: translateY(0);}
+  50% {transform: translateY(-5px);}
+  to {
+    transform: translateY(0);
+  }
+} 
+
+.nav-spin {
+  animation: spin 1s 1;
+}
+
+.work-bounce {
+  animation: bounce 0.5s 2;
+}
