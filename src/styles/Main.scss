@@ -24,6 +24,10 @@
 .work-image {
   height: 75px;
   border-radius: 50%;
+  box-shadow: 4px -4px  rgba(119, 119, 119, 0.6);
+  -moz-box-shadow: 10px -10px  rgba(109, 109, 109, 0.6);
+  -webkit-box-shadow: 4px -4px  rgba(122, 122, 122, 0.6);
+  -o-box-shadow: 10px -10px  rgba(129, 129, 129, 0.6);
 }
 .work-item-container {
   @include flexbox(row, space-between, center);

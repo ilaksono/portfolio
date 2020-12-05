@@ -31,7 +31,7 @@ const Work = () => {
     <div className='work-layout'>
       <h2 className='work-header'>
 
-      Companies worked:
+      With Companies:
       </h2>
         {parsedWorks}
     </div>
