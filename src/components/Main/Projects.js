@@ -4,7 +4,8 @@ const projectsArr = [
     title: 'SafeSpace - React & Google/Yelp APIs'
   },
   {
-    url: 'http://tiny-app-291120.uk.r.appspot.com/register',
+    // url: 'http://tiny-app-291120.uk.r.appspot.com/register',
+    url:'http://ian.laksono.net',
     title: 'Battleship - JQuery & Express'
   },
   {
