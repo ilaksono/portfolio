@@ -43,3 +43,22 @@
   width: 60px;
   text-align: center;
 }
+.nav-spacer {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .nav-container {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1;
+    height:75px;
+  }
+  .nav-spacer {
+    display: block;
+    position: absolute;
+    height: 75px;
+    width: 95vw;
+  }
+}

@@ -4,7 +4,7 @@ import AppContext from 'AppContext';
 import Main from 'components/Main';
 import Profile from 'components/Profile';
 import Contact from 'components/Contact';
-import {useCookies} from 'react-cookie'
+import { useCookies } from 'react-cookie';
 function App() {
 
   const [cookies, setCookie, removeCookie] = useCookies(['mode']);
@@ -14,18 +14,20 @@ function App() {
     history
   } = useContext(AppContext);
   useEffect(() => {
-    setCookie('mode', visMode, {path:'/'})
+    setCookie('mode', visMode, { path: '/' });
     // eslint-disable-next-line
-  }, [visMode])
+  }, [visMode]);
 
   useEffect(() => {
-    switchMode(cookies.mode)
-  }, [])
+    if (cookies.mode)
+      switchMode(cookies.mode);
+  }, []);
 
 
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar />
+      {/* <div className='nav-spacer'></div> */}
       {
         visMode === 'MAIN' &&
         <div>
@@ -36,7 +38,7 @@ function App() {
       {
         visMode === 'PROFILE' &&
         <div>
-          <Profile switchMode={switchMode} pageAnim={history[history.length - 2]==='CONTACT' ? ' page-left': ' page-right'}/>
+          <Profile switchMode={switchMode} pageAnim={history[history.length - 2] === 'CONTACT' ? ' page-left' : ' page-right'} />
         </div>
       }
       {

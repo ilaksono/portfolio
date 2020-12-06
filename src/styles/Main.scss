@@ -25,6 +25,7 @@
   width: 50%;
   height: 100%;
   overflow-y: scroll;
+  @include flexbox(column, flex-start, center);
   scroll-snap-type: y mandatory;
   scroll-padding-top: 4px;
 }
@@ -33,9 +34,10 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-padding-top: 4px;
-  height: calc(100vh - 85px);
+  min-height: calc(100vh - 85px);
   width: 25%;
   background-color: $white;
+  padding-bottom: 75px;
 }
 .main-title {
   text-align: center;
@@ -85,9 +87,16 @@
 
 }
 .each-project {
-  width: 100%;
+  width: 95%;
   @include flexbox(column, flex-start, center);
   margin-bottom: 35px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  border: 2px solid grey;
+}
+
+.each-project:hover {
+  box-shadow: 0 0 6px 6px darkgrey;
 }
 
 .skill-item {
@@ -99,6 +108,7 @@
   font-weight: bold;
   font-size: 18px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .skill-logo {
   max-width: 100px;
@@ -119,9 +129,10 @@
   .specialty-layout {
     width: 100%;
     box-shadow: 0 0 2px 2px grey;
-    overflow-y: scroll;
-    scroll-snap-type: none;
+    overflow: visible;
+    scroll-snap-type: default;
     scroll-padding-top: 0;
+    min-height: calc(100vh - 85px);
   }
   .work-layout {
     width: 100%;

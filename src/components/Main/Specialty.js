@@ -55,7 +55,7 @@ const Specialty = () => {
   return (
     <div className='specialty-layout'>
       <h2 className='main-title'>
-        &lt;Stack/&gt;
+        &lt;Stack&gt;
       </h2>
       {parsedSkills}
 

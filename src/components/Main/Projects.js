@@ -19,12 +19,12 @@ const Projects = () => {
   const parsedProjs = projectsArr.map((proj, index) => {
     return (
       <div className='each-project'>
-        <iframe title={proj.title} key={index} className='projects-iframe' src={proj.url}>
-
-        </iframe>
         <a href={proj.url} className='projects-label'>
           {proj.title}
         </a>
+        <iframe title={proj.title} key={index} className='projects-iframe' src={proj.url}>
+
+        </iframe>
       </div>
     );
   });
@@ -33,13 +33,13 @@ const Projects = () => {
     <div className='projects-layout'>
 
       <h2 className='main-title'>
-        &lt;Projects/&gt;
+        &lt;Projects&gt;
         </h2>
       {parsedProjs}
       <div className='each-project'>
 
-        <img src='/jungle.png' alt='jungle' className='jungle-screen'></img>
         <a className='projects-label' href='https://github.com/ilaksono/jungle-rails'>Jungle - Ruby on Rails</a>
+        <img src='/jungle.png' alt='jungle' className='jungle-screen'></img>
       </div>
     </div>
   );

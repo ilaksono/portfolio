@@ -44,7 +44,7 @@ const Work = () => {
   return (
     <div className='work-layout'>
       <h2 className='main-title'>
-        &lt;Companies/&gt;
+        &lt;Companies&gt;
       </h2>
       {parsedWorks}
     </div>
