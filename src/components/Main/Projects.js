@@ -4,15 +4,14 @@ const projectsArr = [
     title: 'SafeSpace - React & Google/Yelp APIs'
   },
   {
-    // url: 'http://tiny-app-291120.uk.r.appspot.com/register',
-    url:'http://ian.laksono.net',
-    title: 'Battleship - JQuery & Express'
-  },
-  {
     url: 'https://scheduler-laksono.netlify.app/',
     title: 'Scheduler - React & Express'
-  }
-
+  },
+  {
+    // url: 'http://tiny-app-291120.uk.r.appspot.com/register',
+    url: '/bs.png',
+    title: 'Battleship - JQuery & Express'
+  },
 ];
 
 const Projects = () => {
@@ -39,8 +38,8 @@ const Projects = () => {
       {parsedProjs}
       <div className='each-project'>
 
-      <img src='/jungle.png' alt='jungle' className='jungle-screen'></img>
-      <a className='projects-label' href='https://github.com/ilaksono/jungle-rails'>Jungle - Ruby on Rails</a>
+        <img src='/jungle.png' alt='jungle' className='jungle-screen'></img>
+        <a className='projects-label' href='https://github.com/ilaksono/jungle-rails'>Jungle - Ruby on Rails</a>
       </div>
     </div>
   );

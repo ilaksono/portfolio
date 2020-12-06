@@ -9,6 +9,10 @@ const skillsArr = [
     title: 'Express'
   },
   {
+    url: '/node.png',
+    title: 'Node'
+  },
+  {
     url: '/rails.png',
     title: 'Rails'
   },
