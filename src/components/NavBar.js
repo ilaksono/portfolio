@@ -24,7 +24,7 @@ const NavBar = () => {
         }}
         onAnimationEnd={() => setAnim({ ...anim, mainSpin: false })}
       >
-        <i class="fab fa-canadian-maple-leaf"></i>
+        <i className="fab fa-canadian-maple-leaf"></i>
       </div>
       </div>
       <div
@@ -54,7 +54,7 @@ const NavBar = () => {
         }}
         onAnimationEnd={() => setAnim({ ...anim, mailSpin: false })}
       >
-        <i class="fas fa-paper-plane"></i>
+        <i className="fas fa-paper-plane"></i>
       </div>
       </div>
     </nav>

@@ -35,9 +35,9 @@ const initAnim = {
 const Work = () => {
   const [anim, setAnim] = useState(initAnim);
 
-  const parsedWorks = workArr.map((work) => {
+  const parsedWorks = workArr.map((work, index) => {
     return (
-      <WorkListItem {...work} setAnim={setAnim} anim={anim}/>
+      <WorkListItem {...work} setAnim={setAnim} key={index} anim={anim}/>
     );
   });
 

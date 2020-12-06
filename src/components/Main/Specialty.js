@@ -38,7 +38,7 @@ const skillsArr = [
 const Specialty = () => {
   const parsedSkills = skillsArr.map((skill, index) => {
     return (
-      <div className='skill-item'>
+      <div className='skill-item' key={index}>
         <img
           src={skill.url}
           alt={skill.title}
