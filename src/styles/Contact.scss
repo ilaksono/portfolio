@@ -45,6 +45,9 @@
   color: $lightb;
   text-decoration: none;
 }
+.parentheses {
+  font-family: 'Inconsolata', monospace;
+}
 
 @media screen and (max-width: 650px) {
   .contact-layout {

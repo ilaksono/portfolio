@@ -105,19 +105,30 @@
   max-height: 100px;
   background-color: $white;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   .main-layout {
     @include flexbox(column, center, flex-start);
+    height: 100%;
   }
   .projects-layout{
     width: 100%;
+    overflow-y: default;
+    scroll-snap-type: default;
+    scroll-padding-top: 0;
   }
   .specialty-layout {
     width: 100%;
     box-shadow: 0 0 2px 2px grey;
+    overflow-y: scroll;
+    scroll-snap-type: none;
+    scroll-padding-top: 0;
   }
   .work-layout {
     width: 100%;
     box-shadow: 0 0 2px 2px grey;
+    overflow-y: default;
+    scroll-snap-type: default;
+    scroll-padding-top: 0;
+    height: 100%;
   }
 }

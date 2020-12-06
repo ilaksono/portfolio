@@ -5,11 +5,12 @@ const AppContext = React.createContext();
 
 export const AppProvider = ({children}) => {
 
-  const {visMode, switchMode} = useVisualMode();
+  const {visMode, switchMode, history} = useVisualMode();
   return (
     <AppContext.Provider value={{
       visMode,
-      switchMode
+      switchMode,
+      history
     }}>
       {children}
     </AppContext.Provider>

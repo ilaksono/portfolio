@@ -1,15 +1,15 @@
-import {useState} from 'react';
+import { useState } from 'react';
 const contactDetails = [
   {
     iconCL: "fab fa-linkedin",
-    title:'@i-laksono',
-    href:'https://www.linkedin.com/in/ian-laksono/'
+    title: '@i-laksono',
+    href: 'https://www.linkedin.com/in/ian-laksono/'
   },
   {
     iconCL: "fab fa-linkedin",
     title: '@i-laksono',
     href: 'https://www.linkedin.com/in/ian-laksono/',
-    target:'_blank'
+    target: '_blank'
   },
   {
     iconCL: "fab fa-linkedin",
@@ -17,16 +17,16 @@ const contactDetails = [
     href: 'https://www.linkedin.com/in/ian-laksono/'
   },
 
-]
+];
 const initAnim = {
   linBounce: false,
   mailBounce: false,
   gitBounce: false,
   resBounce: false
-}
+};
 
 const ContactTable = () => {
-  const [anim, setAnim] = useState(initAnim)
+  const [anim, setAnim] = useState(initAnim);
 
 
   return (
@@ -35,9 +35,9 @@ const ContactTable = () => {
       </h1>
       <div className='contact-div'>
         <div
-        className={`${anim.linBounce ? 'work-bounce':''}`}
-        onMouseOver={() => setAnim({...anim, linBounce: true})}
-        onAnimationEnd={() => setAnim({...anim, linBounce: false})}
+          className={`${anim.linBounce ? 'work-bounce' : ''}`}
+          onMouseOver={() => setAnim({ ...anim, linBounce: true })}
+          onAnimationEnd={() => setAnim({ ...anim, linBounce: false })}
         >
           <i className="fab fa-linkedin"><b>:</b></i>
         </div>
@@ -58,7 +58,7 @@ const ContactTable = () => {
         </div>
         <a href='mailto: ian@laksono.net'
           className='contact-link'>
-          ian@laksono.net,
+          &nbsp;ian@laksono.net,
         </a>
         <div
           className={`${anim.gitBounce ? 'work-bounce' : ''}`}
@@ -72,7 +72,7 @@ const ContactTable = () => {
           target='_blank'
           rel='noreferrer'
           className='contact-link'
-          >
+        >
           @ilaksono,
         </a>
         <div
@@ -88,9 +88,13 @@ const ContactTable = () => {
           rel='noreferrer'
           className='contact-link'
         >
-          getResume()
+          <span style={{ display: 'inline-block' }}>
+            <span className='parentheses'>()&nbsp;=&gt;&nbsp;</span>
+            <span>getResume</span>
+            <span className='parentheses'>()</span>
+          </span>
         </a>
-        
+
       </div>
       <h1 className='closing'>&#125;);</h1>
     </div>

@@ -4,12 +4,14 @@ import 'styles/index.scss';
 import App from './App';
 import { AppProvider } from 'AppContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { CookiesProvider } from 'react-cookie';
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvider>
-      <App />
-    </AppProvider>
+    <CookiesProvider>
+      <AppProvider>
+        <App />
+      </AppProvider>
+    </CookiesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

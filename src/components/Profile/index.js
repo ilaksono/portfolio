@@ -16,7 +16,7 @@ const Profile = (props) => {
     setBigPhoto({ mode: true, url });
   };
   return (
-    <div className='profile-layout'>
+    <div className={`profile-layout${props.pageAnim}`}>
       <div className='prof-anec-container'>
         <div className='pic-container'>
           <div className='prof-pic-container'>
@@ -44,7 +44,7 @@ const Profile = (props) => {
           <h6>
             Plays piano and loves snowboarding
         </h6>
-          <h7 className='punch-line'>Hire me, maybe</h7>
+          <h6 className='punch-line' onClick={() => props.switchMode('CONTACT')}>Hire me, maybe</h6>
         </div>
       </div>
       <div className='bg-container'>
