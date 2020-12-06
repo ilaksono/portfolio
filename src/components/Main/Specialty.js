@@ -35,6 +35,10 @@ const skillsArr = [
   {
     url:'/c.png',
     title: 'C'
+  },
+  {
+    url: 'https://www.w3.org/WAI/wcag21/wcag2.1A-blue-v.png',
+    title: 'w3c'
   }
 
 ];
