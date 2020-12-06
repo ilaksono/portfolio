@@ -31,13 +31,13 @@
 }
 .specialty-layout {
   @include flexbox(column, flex-start, center);
-  overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-padding-top: 4px;
+  overflow-y: scroll;
   min-height: calc(100vh - 85px);
   width: 25%;
   background-color: $white;
-  padding-bottom: 75px;
+  // padding-bottom: 75px;
 }
 .main-title {
   text-align: center;
@@ -129,10 +129,10 @@
   .specialty-layout {
     width: 100%;
     box-shadow: 0 0 2px 2px grey;
-    overflow: visible;
-    scroll-snap-type: default;
-    scroll-padding-top: 0;
+    // scroll-snap-type: default;
+    // scroll-padding-top: 0;
     min-height: calc(100vh - 85px);
+    padding-bottom: 75px;
   }
   .work-layout {
     width: 100%;
@@ -141,5 +141,10 @@
     scroll-snap-type: default;
     scroll-padding-top: 0;
     height: 100%;
+  }
+}
+@media screen and (min-width: 851px) {
+  .specialty-layout {
+    height: calc(100vh - 85px);
   }
 }
