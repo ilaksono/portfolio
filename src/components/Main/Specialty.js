@@ -13,6 +13,10 @@ const skillsArr = [
     title: 'Rails'
   },
   {
+    url:'/pg.png',
+    title:'PostgreSQL'
+  },
+  {
     url: '/js.png',
     title: 'JavaScript'
   },
@@ -24,6 +28,10 @@ const skillsArr = [
     url: '/html.svg',
     title: 'HTML'
   },
+  {
+    url:'/c.png',
+    title: 'C'
+  }
 
 ];
 
@@ -43,7 +51,7 @@ const Specialty = () => {
   return (
     <div className='specialty-layout'>
       <h2 className='main-title'>
-        Abilities:
+        &lt;Stack/&gt;
       </h2>
       {parsedSkills}
 

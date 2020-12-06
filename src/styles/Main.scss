@@ -3,7 +3,7 @@
 .main-layout {
   @include flexbox(row, flex-start, center);
   background-color: $white;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 85px);
   width: 100vw;
 }
 
@@ -33,7 +33,7 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-padding-top: 4px;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 85px);
   width: 25%;
   background-color: $lightb;
 }
@@ -65,10 +65,23 @@
 .projects-iframe {
   width: 80%;
   min-height: 280px;
+  border: 2px solid rgb(197, 197, 197);
+  border-right: 3px solid rgb(197, 197, 197);
+}
+.projects-iframe:hover {
+  width: 80%;
+  min-height: 280px;
+  box-shadow: 0 0 4px 4px grey;
 }
 .jungle-screen {
   width: 80%;
   height: 260px;
+    border: 2px solid rgb(197, 197, 197);
+  border-right: 3px solid rgb(197, 197, 197);
+}
+.jungle-screen:hover {
+  box-shadow: 0 0 4px 4px grey;
+
 }
 .each-project {
   width: 100%;

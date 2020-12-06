@@ -22,3 +22,22 @@
 .work-bounce {
   animation: bounce 0.5s 2;
 }
+
+.add-wobble {
+  animation: small-wobble 1s 1;
+}
+
+@keyframes small-wobble {
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

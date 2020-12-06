@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import AppContext from 'AppContext';
 import Main from 'components/Main';
 import Profile from 'components/Profile';
+import Contact from 'components/Contact';
 
 function App() {
   const {
@@ -22,6 +23,12 @@ function App() {
         visMode === 'PROFILE' &&
         <div>
           <Profile />
+        </div>
+      }
+      {
+        visMode === 'CONTACT' &&
+        <div>
+          <Contact />
         </div>
       }
 

@@ -2,13 +2,14 @@
 
 .nav-container {
   @include flexbox(row, space-between, center);
-  height: 70px;
+  height: 85px;
   padding-bottom: 2px;
   background-color: $darkp;
   color: white;
   opacity: 0.9;
   padding-left: 55px;
   padding-right: 55px;
+  box-shadow: 0 0 4px 4px rgb(199, 199, 199)
 }
 
 

@@ -1,0 +1,21 @@
+@import './helpers.scss';
+.res-embed {
+  height: calc(100vh - 90px);
+  width: 40vw;
+}
+
+.res-embed-container {
+
+}
+
+.contact-layout {
+  @include flexbox(row, flex-start, flex-start);
+}
+.contact-title {
+  margin-top: 40px;
+  text-align: center;
+}
+.get-in-contact{
+  width: 58vw;
+  @include flexbox(column, flex-start, center);
+}

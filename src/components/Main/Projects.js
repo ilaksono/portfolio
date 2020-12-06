@@ -33,7 +33,7 @@ const Projects = () => {
     <div className='projects-layout'>
 
       <h2 className='main-title'>
-        My Projects:
+        &lt;Projects/&gt;
         </h2>
       {parsedProjs}
       <div className='each-project'>
