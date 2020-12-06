@@ -7,7 +7,7 @@ const initBig = {
 };
 const initAnim = {
   nameWobble: false
-}
+};
 const Profile = (props) => {
   const [bigPhoto, setBigPhoto] = useState(initBig);
   const [anim, setAnim] = useState(initAnim);
@@ -26,9 +26,9 @@ const Profile = (props) => {
             >
             </img>
           </div>
-          <h1 className={`name-header${anim.nameWobble ? ' add-wobble':''}`} 
-            onMouseOver={() => setAnim({...anim, nameWobble: true})}
-            onAnimationEnd={() => setAnim({...anim, nameWobble:false})}
+          <h1 className={`name-header${anim.nameWobble ? ' add-wobble' : ''}`}
+            onMouseOver={() => setAnim({ ...anim, nameWobble: true })}
+            onAnimationEnd={() => setAnim({ ...anim, nameWobble: false })}
           >
             IAN LAKSONO
           </h1>
@@ -65,7 +65,6 @@ const Profile = (props) => {
           onHide={() => setBigPhoto(initBig)}
         />
       }
-
     </div>
   );
 };

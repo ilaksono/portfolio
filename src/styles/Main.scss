@@ -10,7 +10,7 @@
 .work-layout {
   width: 25%;
   height: 100%;
-  background-color: $lightb;
+  background-color: $white;
   color: rgb(38, 38, 56);
   @include flexbox(column, flex-start, center);
   overflow-y: scroll;
@@ -35,12 +35,13 @@
   scroll-padding-top: 4px;
   height: calc(100vh - 85px);
   width: 25%;
-  background-color: $lightb;
+  background-color: $white;
 }
 .main-title {
   text-align: center;
   margin-bottom: 35px;
   margin-top: 40px;
+  width: 100%;
   color: rgb(32, 6, 53);
   font-weight: bold;
 }
@@ -102,5 +103,21 @@
 .skill-logo {
   max-width: 100px;
   max-height: 100px;
-  background-color: $lightb;
+  background-color: $white;
+}
+@media screen and (max-width: 700px) {
+  .main-layout {
+    @include flexbox(column, center, flex-start);
+  }
+  .projects-layout{
+    width: 100%;
+  }
+  .specialty-layout {
+    width: 100%;
+    box-shadow: 0 0 2px 2px grey;
+  }
+  .work-layout {
+    width: 100%;
+    box-shadow: 0 0 2px 2px grey;
+  }
 }

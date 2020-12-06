@@ -1,5 +1,5 @@
 import 'styles/Contact.scss';
-
+import ContactTable from './ContactTable';
 const Contact = () => {
 
 
@@ -12,16 +12,12 @@ const Contact = () => {
           className='res-embed'
         >
         </iframe>
-       
-
       </div>
-      <div className='get-in-contact'>
-        <h2 className='main-title'>getContact &nbsp; = &nbsp; &#123; </h2>
-        <h3>
+      <div className='contact-container'>
 
-        </h3>
-      
+        <ContactTable/>
       </div>
+
     </div>
 
   );

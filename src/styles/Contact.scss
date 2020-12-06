@@ -7,6 +7,12 @@
 .res-embed-container {
 
 }
+.closing {
+  align-self: flex-start;
+  margin-left: 10%;
+  font-weight: bold;
+  color: rgb(32, 6, 53);
+}
 
 .contact-layout {
   @include flexbox(row, flex-start, flex-start);
@@ -16,6 +22,50 @@
   text-align: center;
 }
 .get-in-contact{
-  width: 58vw;
+  width: 40%;
+  margin-left: 20%;
   @include flexbox(column, flex-start, center);
 }
+.contact-container {
+  width: 58vw;
+}
+
+.contact-div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(4, 70px);
+  font-size: 1.8em;
+  padding-left:25%;
+  color: rgb(54, 54, 88);
+}
+.contact-link {
+  color: $darkp;
+}
+.contact-link:hover {
+  color: $lightb;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 650px) {
+  .contact-layout {
+    justify-content: center;
+  }
+  .res-embed-container {
+    display: none;
+  }
+  .get-in-contact {
+    margin: 0;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .contact-div {
+    margin-left: 10%;
+  }
+  .closing {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+}
+
