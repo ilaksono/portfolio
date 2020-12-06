@@ -39,6 +39,14 @@ const skillsArr = [
   {
     url: 'https://www.w3.org/WAI/wcag21/wcag2.1A-blue-v.png',
     title: 'w3c'
+  },
+  {
+    url: '/wp.png',
+    title: 'Webpack'
+  },
+  {
+    url: 'https://i.pinimg.com/originals/40/58/3b/40583b9485486616cc310cf5c5282b85.png',
+    title: 'Google Cloud'
   }
 
 ];
