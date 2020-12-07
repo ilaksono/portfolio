@@ -61,7 +61,7 @@ const NavBar = () => {
         className={visMode === 'ARTICLE' ? 'selected' : 'not-selected'}
       >
         <div
-          className={`about-me-logo${anim.mailSpin ? ' nav-spin' : ''}`}
+          className={`about-me-logo${anim.newsSpin ? ' nav-spin' : ''}`}
           onClick={() => {
             switchMode('ARTICLE');
             setAnim({ ...anim, newsSpin: true });

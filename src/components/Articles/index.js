@@ -43,7 +43,7 @@ const Articles = () => {
 
       <div className='articles-container'>
 
-        {parsedArts.length &&
+        {parsedArts.length > 0 &&
           parsedArts}
 
       </div>
