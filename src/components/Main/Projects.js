@@ -13,7 +13,7 @@ const Projects = () => {
 
   const parsedProjs = projectsArr.map((proj, index) => {
     return (
-      <div className='each-project'>
+      <div className='each-project' onClick={() => window.open(proj.url, '_blank', '')}>
         <a href={proj.url} className='projects-label'>
           {proj.title}
         </a>
@@ -31,15 +31,20 @@ const Projects = () => {
         &lt;Projects&gt;
         </h2>
       {parsedProjs}
-      <div className='each-project'>
+      <div className='each-project' onClick={() => window.open('https://github.com/ilaksono/jungle-rails', '_blank', '')}>
 
         <a className='projects-label' href='https://github.com/ilaksono/jungle-rails'>Jungle - Ruby on Rails</a>
         <img src='/jungle.png' alt='jungle' className='jungle-screen'></img>
       </div>
-      <div className='each-project'>
+      <div className='each-project' onClick={() => window.open('http://tiny-app-291120.uk.r.appspot.com/register', '_blank', '')}>
 
         <a className='projects-label' href='http://tiny-app-291120.uk.r.appspot.com/register'>Battleship - JQuery &amp; Express</a>
         <img src='/bs.png' alt='battleship' className='jungle-screen'></img>
+      </div>
+      <div className='projects-closing'>
+        <a href='https://github.com/ilaksono'>
+          Visit my GitHub <i class="fab fa-github"></i>
+          </a>
       </div>
     </div>
   );

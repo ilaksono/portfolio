@@ -93,6 +93,7 @@
   padding-bottom: 10px;
   border-radius: 20px;
   border: 2px solid grey;
+  cursor: pointer;
   background-color: rgb(253, 253, 253);
 }
 
@@ -143,6 +144,9 @@
     scroll-padding-top: 0;
     height: 100%;
   }
+}
+.projects-closing {
+  margin-bottom: 25px;
 }
 @media screen and (min-width: 851px) {
   .specialty-layout {
