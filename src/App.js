@@ -5,6 +5,7 @@ import Main from 'components/Main';
 import Profile from 'components/Profile';
 import Contact from 'components/Contact';
 import { useCookies } from 'react-cookie';
+import Articles from 'components/Articles';
 function App() {
 
   const [cookies, setCookie, removeCookie] = useCookies(['mode']);
@@ -38,14 +39,22 @@ function App() {
       {
         visMode === 'PROFILE' &&
         <div>
-          <Profile switchMode={switchMode} pageAnim={history[history.length - 2] === 'CONTACT' ? ' page-left' : ' page-right'} />
+          <Profile 
+          switchMode={switchMode} 
+          pageAnim=
+          {(history[history.length - 2] === 'CONTACT'||history[history.length - 2] === 'ARTICLE') 
+          ? ' page-left' : ' page-right'} />
         </div>
       }
       {
         visMode === 'CONTACT' &&
         <div>
-          <Contact />
+          <Contact pageAnim={history[history.length - 2] === 'ARTICLE' ? ' page-left' : ' page-right'}/>
         </div>
+      }
+      {
+        visMode === 'ARTICLE' &&
+        <Articles />
       }
 
     </div>

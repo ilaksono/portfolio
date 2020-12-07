@@ -21,6 +21,7 @@
 }
 
 @keyframes fadeInRight {
+
   0% {
     opacity: 0;
     transform: translate3d(100%, 0, 0);
@@ -48,4 +49,8 @@
 }
 .page-left {
   animation: fadeInLeft 1s 1;
+}
+
+.article-right {
+  animation: fadeInRight 1.5s 1;
 }

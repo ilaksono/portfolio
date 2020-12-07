@@ -5,7 +5,8 @@ import 'styles/Animations.scss';
 const initAnim = {
   mainSpin: false,
   meSpin: false,
-  mailSpin: false
+  mailSpin: false,
+  newsSpin: false,
 };
 
 const NavBar = () => {
@@ -45,7 +46,6 @@ const NavBar = () => {
       <div
         className={visMode === 'CONTACT' ? 'selected' : 'not-selected'}
       >
-
       <div 
       className={`about-me-logo${anim.mailSpin ? ' nav-spin': ''}`}
         onClick={() => {
@@ -56,6 +56,20 @@ const NavBar = () => {
       >
         <i className="fas fa-paper-plane"></i>
       </div>
+      </div>
+      <div
+        className={visMode === 'ARTICLE' ? 'selected' : 'not-selected'}
+      >
+        <div
+          className={`about-me-logo${anim.mailSpin ? ' nav-spin' : ''}`}
+          onClick={() => {
+            switchMode('ARTICLE');
+            setAnim({ ...anim, newsSpin: true });
+          }}
+          onAnimationEnd={() => setAnim({ ...anim, newsSpin: false })}
+        >
+          <i class="fas fa-newspaper"></i>
+        </div>
       </div>
     </nav>
   );
