@@ -7,11 +7,6 @@ const projectsArr = [
     url: 'https://scheduler-laksono.netlify.app/',
     title: 'Scheduler - React & Express'
   },
-  {
-    // url: 'http://tiny-app-291120.uk.r.appspot.com/register',
-    url: '/bs.png',
-    title: 'Battleship - JQuery & Express'
-  },
 ];
 
 const Projects = () => {
@@ -40,6 +35,11 @@ const Projects = () => {
 
         <a className='projects-label' href='https://github.com/ilaksono/jungle-rails'>Jungle - Ruby on Rails</a>
         <img src='/jungle.png' alt='jungle' className='jungle-screen'></img>
+      </div>
+      <div className='each-project'>
+
+        <a className='projects-label' href='http://tiny-app-291120.uk.r.appspot.com/register'>Battleship - JQuery &amp; Express</a>
+        <img src='/bs.png' alt='battleship' className='jungle-screen'></img>
       </div>
     </div>
   );
