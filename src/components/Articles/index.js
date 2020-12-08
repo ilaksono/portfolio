@@ -14,7 +14,6 @@ const Articles = () => {
     axios
       .get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ilaksono`)
       .then((data) => {
-        console.log(data);
         setArts(data.data.items);
       });
   }, []);
