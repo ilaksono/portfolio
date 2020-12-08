@@ -3,6 +3,7 @@ import axios from 'axios';
 import ToText from './ToText';
 import 'styles/Articles.scss';
 import moment from "moment";
+import { CircularProgress } from '@material-ui/core';
 const Articles = () => {
 
   const handleClick = (url) => {
@@ -42,8 +43,11 @@ const Articles = () => {
 
       <div className='articles-container'>
 
-        {parsedArts.length > 0 &&
-          parsedArts}
+        {parsedArts.length > 0 ?
+          parsedArts
+        :
+        <CircularProgress size='100' color='primary'/>
+        }
 
       </div>
     </div>
