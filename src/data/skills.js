@@ -20,6 +20,10 @@ const skillsArr = [
     title:'PostgreSQL'
   },
   {
+    url:'https://webassets.mongodb.com/_com_assets/cms/MongoDB_Logo_FullColorBlack_RGB-4td3yuxzjs.png',
+    title:'MongoDB'
+  },
+  {
     url: '/js.png',
     title: 'JavaScript'
   },
