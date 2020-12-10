@@ -1,7 +1,7 @@
 @import './helpers.scss';
 
 .profile-layout {
-  background-color: $white;
+  // background-color: $white;
   height: calc(100vh - 85px);
   padding: 35px;
   @include flexbox(row, flex-start, center);

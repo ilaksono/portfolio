@@ -6,7 +6,8 @@ import Profile from 'components/Profile';
 import Contact from 'components/Contact';
 import { useCookies } from 'react-cookie';
 import Articles from 'components/Articles';
-
+import 'styles/Background.scss';
+import Background from 'components/Background.js';
 function App() {
 
   const [cookies, setCookie, removeCookie] = useCookies(['mode']);
@@ -57,7 +58,7 @@ function App() {
         visMode === 'ARTICLE' &&
         <Articles />
       }
-
+    <Background />
     </div>
   );
 }

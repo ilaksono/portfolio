@@ -2,7 +2,7 @@
 
 .main-layout {
   @include flexbox(row, flex-start, center);
-  background-color: $white;
+  // background-color: $white;
   height: calc(100vh - 85px);
   width: 100vw;
 }
@@ -10,12 +10,11 @@
 .work-layout {
   width: 25%;
   height: 100%;
-  background-color: $white;
+  // background-color: $white;
   color: rgb(38, 38, 56);
   @include flexbox(column, flex-start, center);
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 4px;
+  box-shadow: 0 0 3px 3px grey;
+  
   padding-left: 15px;
   padding-right: 15px;
   cursor: default;
@@ -36,7 +35,7 @@
   overflow-y: scroll;
   min-height: calc(100vh - 85px);
   width: 25%;
-  background-color: $white;
+  // background-color: $white;
   // padding-bottom: 75px;
 }
 .main-title {
@@ -151,5 +150,13 @@
 @media screen and (min-width: 851px) {
   .specialty-layout {
     height: calc(100vh - 85px);
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .work-layout {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 4px;
   }
 }

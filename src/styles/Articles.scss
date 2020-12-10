@@ -1,6 +1,6 @@
 @import './helpers.scss';
 .articles-layout {
-  background-color: $white;
+  // background-color: $white;
    @include flexbox(column, flex-start, center);
   height: calc(100vh - 85px);
   width: 100vw;
