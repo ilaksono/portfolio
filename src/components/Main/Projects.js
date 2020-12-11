@@ -30,6 +30,13 @@ const Projects = () => {
       <h2 className='main-title'>
         &lt;Projects&gt;
         </h2>
+      <div className='each-project' onClick={() => window.open('https://github.com/ilaksono/trader-react-express', '_blank', '')}>
+        Currently building up
+          <a href='https://github.com/ilaksono/trader-react-express' target='_blank' rel='noreferrer'>
+          Trader <i class="fas fa-signal"></i>
+            </a>
+        </div>
+
       {parsedProjs}
       <div className='each-project' onClick={() => window.open('https://github.com/ilaksono/jungle-rails', '_blank', '')}>
 

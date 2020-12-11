@@ -44,7 +44,8 @@ const Profile = (props) => {
           <h6>
             Plays piano and loves snowboarding
         </h6>
-          <h6 className='punch-line' onClick={() => props.switchMode('CONTACT')}>Hire me, maybe</h6>
+          <h6 className='punch-line' 
+          onClick={() => props.switchMode('CONTACT')}>Hire me, maybe</h6>
         </div>
       </div>
       <div className='bg-container'>

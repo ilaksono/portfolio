@@ -59,6 +59,9 @@ function App() {
         <Articles />
       }
     <Background />
+    <footer style={{position:'fixed', bottom:'0', left: 0}}>
+        2020 | Ian Laksono <i class="far fa-copyright"></i>
+    </footer>
     </div>
   );
 }
