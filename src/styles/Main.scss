@@ -23,16 +23,11 @@
 .projects-layout {
   width: 50%;
   height: 100%;
-  overflow-y: scroll;
   @include flexbox(column, flex-start, center);
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 4px;
 }
 .specialty-layout {
   @include flexbox(column, flex-start, center);
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 4px;
-  overflow-y: scroll;
+  
   min-height: calc(100vh - 85px);
   width: 25%;
   // background-color: $white;
@@ -150,6 +145,14 @@
 @media screen and (min-width: 851px) {
   .specialty-layout {
     height: calc(100vh - 85px);
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 4px;
+    overflow-y: scroll;
+  }
+  .projects-layout {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 4px;
   }
 }
 

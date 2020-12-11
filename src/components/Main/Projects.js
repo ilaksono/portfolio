@@ -34,12 +34,12 @@ const Projects = () => {
       <div className='each-project' onClick={() => window.open('https://github.com/ilaksono/jungle-rails', '_blank', '')}>
 
         <a className='projects-label' href='https://github.com/ilaksono/jungle-rails'>Jungle - Ruby on Rails</a>
-        <img src='/jungle.png' alt='jungle' className='jungle-screen'></img>
+        <div style={{backgroundImage: `url('/jungle.png')`}} src='/jungle.png' alt='jungle' className='jungle-screen'></div>
       </div>
       <div className='each-project' onClick={() => window.open('http://tiny-app-291120.uk.r.appspot.com/register', '_blank', '')}>
 
         <a className='projects-label' href='http://tiny-app-291120.uk.r.appspot.com/register'>Battleship - JQuery &amp; Express</a>
-        <img src='/bs.png' alt='battleship' className='jungle-screen'></img>
+        <div style={{ backgroundImage: `url('/bs.png')` }} src='/bs.png' alt='battleship' className='jungle-screen'></div>
       </div>
       <div className='projects-closing'>
         <a href='https://github.com/ilaksono'>
