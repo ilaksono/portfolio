@@ -35,6 +35,7 @@ const Projects = () => {
           <a href='https://github.com/ilaksono/trader-react-express' target='_blank' rel='noreferrer'>
           Trader <i class="fas fa-signal"></i>
             </a>
+        <div style={{ backgroundImage: `url('/Chart-Page (1).png')` }} src='/Chart-Page (1).png' alt='battleship' className='jungle-screen'></div>
         </div>
 
       {parsedProjs}
