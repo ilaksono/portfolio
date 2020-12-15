@@ -14,7 +14,7 @@ const Projects = () => {
   const parsedProjs = projectsArr.map((proj, index) => {
     return (
       <div className='each-project' onClick={() => window.open(proj.url, '_blank', '')}>
-        <a href={proj.url} className='projects-label'>
+        <a href={proj.url} target='_blank' rel='noreferrer' className='projects-label'>
           {proj.title}
         </a>
         <iframe title={proj.title} key={index} className='projects-iframe' src={proj.url}>
