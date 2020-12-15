@@ -58,7 +58,7 @@ const ContactTable = () => {
         </div>
         <a href='mailto: ian@laksono.net'
           className='contact-link'>
-          &nbsp;ian@laksono.net,
+          &nbsp;ian.laksono@gmail.com,
         </a>
         <div
           className={`${anim.gitBounce ? 'work-bounce' : ''}`}
