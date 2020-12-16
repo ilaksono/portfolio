@@ -5,10 +5,10 @@ import 'styles/PageAnimations.scss'
 
 import Specialty from './Specialty';
 
-const Main = () => {
+const Main = (props) => {
 
   return (
-    <div className='main-layout page-left'>
+    <div className={`main-layout${props.pageAnim}`}>
     <Work/>
     <Projects/>
     <Specialty/>

@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 
-const initVis = 'MAIN'
+const initVis = 'PROFILE'
 const useVisualMode = () => {
   const [visMode, setVisMode] = useState(initVis);
   const [history, setHistory] = useState([]);

@@ -32,36 +32,37 @@ function App() {
       <NavBar />
       {/* <div className='nav-spacer'></div> */}
       {
+        visMode === 'PROFILE' &&
+        <div>
+          <Profile
+            switchMode={switchMode}
+            pageAnim=' page-left' />
+        </div>
+      }
+      {
         visMode === 'MAIN' &&
         <div>
-          <Main />
+          <Main 
+            pageAnim=
+            {(history[history.length - 2] === 'CONTACT' || history[history.length - 2] === 'ARTICLE')
+              ? ' page-left' : ' page-right'}/>
         </div>
       }
 
       {
-        visMode === 'PROFILE' &&
-        <div>
-          <Profile 
-          switchMode={switchMode} 
-          pageAnim=
-          {(history[history.length - 2] === 'CONTACT'||history[history.length - 2] === 'ARTICLE') 
-          ? ' page-left' : ' page-right'} />
-        </div>
-      }
-      {
         visMode === 'CONTACT' &&
         <div>
-          <Contact pageAnim={history[history.length - 2] === 'ARTICLE' ? ' page-left' : ' page-right'}/>
+          <Contact pageAnim={history[history.length - 2] === 'ARTICLE' ? ' page-left' : ' page-right'} />
         </div>
       }
       {
         visMode === 'ARTICLE' &&
         <Articles />
       }
-    <Background />
-    <footer style={{position:'fixed', bottom:'0', left: 0}}>
+      <Background />
+      <footer style={{ position: 'fixed', bottom: '0', left: 0 }}>
         2020 | Ian Laksono <i class="far fa-copyright"></i>
-    </footer>
+      </footer>
     </div>
   );
 }
