@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      {/* <div className='nav-spacer'></div> */}
+      <div className='nav-spacer'></div>
       {
         visMode === 'PROFILE' &&
         <div>
