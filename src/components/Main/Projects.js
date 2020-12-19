@@ -1,5 +1,9 @@
 const projectsArr = [
   {
+    url: 'https://mui-il.netlify.app/',
+    title: 'PM Dashboard - React & Material UI'
+  },
+  {
     url: 'https://safespace-a.netlify.app/',
     title: 'SafeSpace - React & Google/Yelp APIs'
   },
