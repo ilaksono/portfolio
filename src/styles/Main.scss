@@ -94,7 +94,13 @@
 .each-project:hover {
   box-shadow: 0 0 6px 6px darkgrey;
 }
+.project-git {
+  color:#6a6b73;
+}
 
+.project-git:hover {
+  color: $lightb;
+}
 .skill-item {
   margin: 15px;
 }
@@ -110,6 +116,10 @@
   max-width: 100px;
   max-height: 100px;
   // background-color: $white;
+}
+.project-label-container {
+  @include flexbox(row, space-around, center);
+  width: 100%;
 }
 @media screen and (max-width: 850px) {
   .main-layout {
@@ -142,6 +152,7 @@
 .projects-closing {
   margin-bottom: 25px;
 }
+
 @media screen and (min-width: 851px) {
   .specialty-layout {
     height: calc(100vh - 85px);
