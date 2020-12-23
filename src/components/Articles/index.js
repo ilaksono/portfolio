@@ -25,7 +25,7 @@ const Articles = () => {
         <div className='art-container article-right' onClick={() => handleClick(art.link)}>
           <img src={art.thumbnail} alt={art.title} className='art-thumb' />
           <div className='art-title'>
-            {art.title} - Medium
+            {art.title}
           </div>
           <div className='art-desc'>
             {ToText(art.description.substring(0, 100))}
