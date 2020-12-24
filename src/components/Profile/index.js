@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import PhotoModal from './PhotoModal';
 import 'styles/Profile.scss';
+import 'styles/Smoky.scss';
+import 'styles/Slide.scss';
+
 const initBig = {
   mode: false,
   url: ''
@@ -11,6 +14,7 @@ const initAnim = {
 const Profile = (props) => {
   const [bigPhoto, setBigPhoto] = useState(initBig);
   const [anim, setAnim] = useState(initAnim);
+  const [rdy, setRdy] = useState(false);
   const getPhotoModal = (event) => {
     const url = event.target.getAttribute('src');
     setBigPhoto({ mode: true, url });
@@ -44,8 +48,46 @@ const Profile = (props) => {
           <h6>
             Plays piano and loves snowboarding
         </h6>
-          <h6 className='punch-line' 
-          onClick={() => props.switchMode('CONTACT')}>Hire me, maybe</h6>
+          <h6 className='punch-line'
+            onClick={() => props.switchMode('CONTACT')}>
+
+            {
+              rdy ?
+                <div className="containerA">
+                  <div className="box">
+
+                    <div className="title">
+                      <span className="block"></span>
+                      <h6>I'm super available<span></span></h6>
+                    </div>
+
+                    <div className="role">
+                      <div className="block"></div>
+                      <p>Full Stack Developer</p>
+                    </div>
+
+                  </div>
+                </div>
+                :
+                <div className='smoky-con'>
+                  <span>H</span>
+                  <span>i</span>
+                  <span>r</span>
+                  <span>e &nbsp;</span>
+
+                  <span>m</span>
+                  <span>e</span>
+                  <span>, &nbsp;</span>
+                  <span>m</span>
+                  <span>a</span>
+                  <span>y</span>
+                  <span>b</span>
+                  <span
+                    onAnimationEnd={() => setRdy(true)}
+                  >e</span>
+                </div>
+            }
+          </h6>
         </div>
       </div>
       <div className='bg-container'>
