@@ -1,14 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import ToText from './ToText';
 import 'styles/Articles.scss';
-import moment from "moment";
 import { CircularProgress } from '@material-ui/core';
+import ArticleItem from './ArticleItem';
 const Articles = () => {
-
-  const handleClick = (url) => {
-    window.open(url, "_blank", "");
-  };
 
   const [arts, setArts] = useState([]);
   useEffect(() => {
@@ -21,19 +16,8 @@ const Articles = () => {
   let parsedArts = [];
   if (arts.length) {
     parsedArts = arts.map(art => {
-      return (
-        <div className='art-container article-right' onClick={() => handleClick(art.link)}>
-          <img src={art.thumbnail} alt={art.title} className='art-thumb' />
-          <div className='art-title'>
-            {art.title}
-          </div>
-          <div className='art-desc'>
-            {ToText(art.description.substring(0, 100))}
-          </div>
-          <div className='art-date'>
-            {moment(art.pubDate).format('MMM DD, YYYY hh:mm')}
-          </div>
-        </div>);
+      return <ArticleItem art={art}/>
+        
     });
   }
 
@@ -41,12 +25,12 @@ const Articles = () => {
     <div className='articles-layout page-right'>
       <h2 className='main-title'>&lt;Article&gt;</h2>
 
-      <div className='articles-container'>
-
+      <div
+        className='articles-container'>
         {parsedArts.length > 0 ?
           parsedArts
-        :
-        <CircularProgress size='100' color='primary'/>
+          :
+          <CircularProgress size='100' color='primary' />
         }
 
       </div>
