@@ -22,6 +22,7 @@ const Profile = (props) => {
   const [bigPhoto, setBigPhoto] = useState(initBig);
   const [anim, setAnim] = useState(initAnim);
   const [rdy, setRdy] = useState(false);
+  const [bounce, setBounce] = useState(false);
   const getPhotoModal = (event) => {
     const url = event.target.getAttribute('src');
     setBigPhoto({ mode: true, url });
@@ -76,16 +77,20 @@ const Profile = (props) => {
               opacity: visible.d ? '1' : '0'
             }}
             onAnimationStart={() => setVisible(prev => ({ ...prev, d: true }))}
+            
             >
 
             {
               rdy ?
-                <div className="containerA">
-                  <div className="box">
+                <div className="containerA" onMouseOver={() => setBounce(true)}
+                onMouseOut={() => setBounce(false)}
+                >
+                  <div className={`box${bounce ? ' bounce-inf' : '' }`} 
+                  >
 
                     <div className="title">
                       <span className="block"></span>
-                      <h6>I'm super available<span></span></h6>
+                      <h6>I'm super available<span ></span></h6>
                     </div>
 
                     <div className="role">
