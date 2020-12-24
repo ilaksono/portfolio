@@ -16,6 +16,7 @@
 
 .contact-layout {
   @include flexbox(row, flex-start, flex-start);
+  height: calc(100vh - 90px);
 }
 .contact-title {
   margin-top: 40px;
@@ -49,6 +50,28 @@
   font-family: 'Inconsolata', monospace;
 }
 
+@media screen and (max-width: 770px) {
+  .res-embed-container {
+    display: none;
+  }
+  .contact-layout {
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 200px);
+  }
+  .get-in-contact{
+  // width: 40%;
+  // margin-left: 20%;
+    @include flexbox(column, flex-start, flex-start);
+  }
+  .contact-div {
+    padding-left: 20px;
+  }
+  .closing {
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-width: 670px) {
   .contact-layout {
     justify-content: flex-start;
@@ -61,10 +84,16 @@
     margin: 0;
     width: 100%;
     justify-self: center;
+    margin-left: 1%;
   }
-
+  .main-title {
+    text-align: left;
+  }
   .contact-div {
-    margin-left: 40%;
+    margin-left: 5%;
+  }
+  .contact-container {
+    width: 65vw;
   }
   .closing {
     padding-left: 0;
@@ -72,4 +101,3 @@
   }
 
 }
-
