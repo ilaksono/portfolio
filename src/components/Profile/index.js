@@ -11,7 +11,14 @@ const initBig = {
 const initAnim = {
   nameWobble: false
 };
+const initVis = {
+  a: false,
+  b: false,
+  c: false,
+  d: false
+}
 const Profile = (props) => {
+  const [visible, setVisible] = useState(initVis);
   const [bigPhoto, setBigPhoto] = useState(initBig);
   const [anim, setAnim] = useState(initAnim);
   const [rdy, setRdy] = useState(false);
@@ -39,17 +46,37 @@ const Profile = (props) => {
         </div>
 
         <div className='anecdote'>
-          <h4>
-            A full stack web developer with natural talent
+          <h4 className='h4-1'
+          style={{
+            opacity: visible.a ? '1' : '0'
+          }}
+          onAnimationStart={() => setVisible(prev => ({...prev, a: true}))}
+          >
+            Web Developer with natural talent
         </h4>
-          <h5>
+          <h5 className='h4-1'
+            style={{
+              opacity: visible.b ? '1' : '0'
+            }}
+            onAnimationStart={() => setVisible(prev => ({ ...prev, b: true }))}
+          >
             Background in Chemical Engineering
         </h5>
-          <h6>
+          <h6 className='h6-1'
+            style={{
+              opacity: visible.c ? '1' : '0'
+            }}
+            onAnimationStart={() => setVisible(prev => ({ ...prev, c: true }))}
+          >
             Plays piano and loves snowboarding
         </h6>
           <h6 className='punch-line'
-            onClick={() => props.switchMode('CONTACT')}>
+            onClick={() => props.switchMode('CONTACT')}
+            style={{
+              opacity: visible.d ? '1' : '0'
+            }}
+            onAnimationStart={() => setVisible(prev => ({ ...prev, d: true }))}
+            >
 
             {
               rdy ?
@@ -69,7 +96,7 @@ const Profile = (props) => {
                   </div>
                 </div>
                 :
-                <div className='smoky-con'>
+                <div className='smoky-con h4-1'>
                   <span>H</span>
                   <span>i</span>
                   <span>r</span>

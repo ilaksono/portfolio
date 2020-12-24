@@ -13,8 +13,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 17px;
-  padding-left: 37px;
+  left: 20px;
+  
 
   .box {
     // width: 250px;
@@ -94,8 +94,6 @@
     }
   }
 }
-
-
 
 
 
@@ -213,5 +211,21 @@
   100% {
     opacity: 1;
      bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1031px) {
+  .containerA {
+    width: 40%;
+    margin-left: 120px;
+  }
+}
+@media (max-width: 1030px) and (min-width: 501px) {
+  
+}
+@media screen and (max-width: 500px) {
+  .containerA {
+    left: 17px;
+    padding-left: 37px;
   }
 }

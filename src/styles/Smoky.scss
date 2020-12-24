@@ -33,10 +33,12 @@
   }
   @for $item from 1 through 21 {
     span:nth-of-type(#{$item}){ 
-      animation-delay: #{(4 + ($item/10))}s; 
+      animation-delay: #{(6 + ($item/10))}s; 
     }
   }
 }
+
+
 @keyframes fadeIn {
 0% {opacity:0;}
 100% {opacity:1;}
