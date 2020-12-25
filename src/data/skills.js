@@ -36,6 +36,14 @@ const skillsArr = [
     title: 'HTML'
   },
   {
+    url: '/docker.png',
+    title: 'Docker'
+  },
+  {
+    url: '/kbe.png',
+    title: 'Kubernetes'
+  },
+  {
     url:'/c.png',
     title: 'C'
   },
