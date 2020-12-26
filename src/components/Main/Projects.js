@@ -1,14 +1,15 @@
 const projectsArr = [
   {
-    url: 'https://newsale.netlify.app/',
-    title: 'Retailer - React, Express & PostgresQL',
-    git: 'https://github.com/ilaksono/retailer-react-express'
-  },
-  {
     url: 'https://mui-il.netlify.app/',
     title: 'PM Dashboard - React & Material UI',
     git: 'https://github.com/ilaksono/mui-projects'
   },
+  {
+    url: 'https://newsale.netlify.app/',
+    title: 'Retailer - React, Express & PostgresQL',
+    git: 'https://github.com/ilaksono/retailer-react-express'
+  },
+
   {
     url: 'https://safespace-a.netlify.app/',
     title: 'SafeSpace - React & Google/Yelp APIs',
