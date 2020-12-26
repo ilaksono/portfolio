@@ -24,7 +24,12 @@
   width: 50%;
   height: 100%;
   @include flexbox(column, flex-start, center);
+  // transition: width 2s;
 }
+// .projects-layout:hover {
+//   width: 85%;
+// }
+
 .specialty-layout {
   @include flexbox(column, flex-start, center);
   
