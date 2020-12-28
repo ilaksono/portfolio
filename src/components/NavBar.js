@@ -69,7 +69,7 @@ const NavBar = () => {
           }}
           onAnimationEnd={() => setAnim({ ...anim, newsSpin: false })}
         >
-          <i class="fas fa-newspaper"></i>
+          <i className="fas fa-newspaper"></i>
         </div>
       </div>
     </nav>

@@ -1,11 +1,11 @@
 @import './helpers.scss';
 
 .specialty-layout::-webkit-scrollbar {
-  width: 1em;
+  width: 4px;
 }
  
 .specialty-layout::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
 }
  
 .specialty-layout::-webkit-scrollbar-thumb {
@@ -16,11 +16,11 @@
 
 }
 .projects-layout::-webkit-scrollbar {
-  width: 1em;
+  width: 4px;
 }
  
 .projects-layout::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
 }
  
 .projects-layout::-webkit-scrollbar-thumb {
@@ -30,11 +30,11 @@
   border-radius: 10px;
 }
 .work-layout::-webkit-scrollbar {
-  width: 1em;
+  width: 4px;
 }
  
 .work-layout::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
 }
  
 .work-layout::-webkit-scrollbar-thumb {
@@ -44,11 +44,11 @@
   border-radius: 10px;
 }
 .res-embed-container::-webkit-scrollbar {
-  width: 1em;
+  width: 4px;
 }
  
 .res-embed-container::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
 }
  
 .res-embed-container::-webkit-scrollbar-thumb {
