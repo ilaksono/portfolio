@@ -1,0 +1,78 @@
+.draggable-main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 90%;
+  overflow: hidden;
+  user-select: none;
+  font-family: 'Noto Sans JP', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+}
+
+.content {
+  position: relative;
+  width: 99%;
+  z-index: 1;
+  max-height: calc(8 * 400px - 447px);
+  /* height: 500px; */
+}
+
+
+.content > div {
+  position: absolute;
+  width: 100%;
+  overflow: visible;
+  pointer-events: auto;
+  transform-origin: 50% 50% 0px;
+  border-radius: 5px;
+  color: white;
+  line-height: 30px;
+  /* padding-left: 32px; */
+  font-size: 14.5px;
+  background: lightblue;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.content > div:nth-child(1) {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+/* .content > div:nth-child(1):hover {
+  box-shadow: 0 0 10px 10px rgb(204, 112, 38);
+} */
+.content > div:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+.content > div:nth-child(3) {
+  background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+}
+.content > div:nth-child(4) {
+  background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+}
+.content > div:nth-child(5) {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+.content > div:nth-child(6) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+.content > div:nth-child(7) {
+  background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+}
+@media (max-width: 849px) and (min-width: 401px) {
+  .content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .content {
+    width: 100%;
+  }
+  .content > div {
+    padding-left: 10px;
+
+  }
+  
+}
