@@ -1,5 +1,10 @@
 const projectsArr = [
   {
+    url: 'https://ichatter.netlify.app/',
+    title: 'Chatter - React & Express',
+    git: 'https://github.com/ilaksono/chatter-react-express'
+  },
+  {
     url: 'https://mui-il.netlify.app/',
     title: 'PM Dashboard - React & Material UI',
     git: 'https://github.com/ilaksono/mui-projects'
