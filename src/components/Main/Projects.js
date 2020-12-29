@@ -42,25 +42,25 @@ const Projects = () => {
       git: 'https://github.com/ilaksono/scheduler'
     }
   ];
-  const parsedProjs = projectsArr.map((proj, index) => {
-    return (
-      <div className='each-project' onClick={() => window.open(proj.url, '_blank', '')}>
-        <div className='project-label-container' >
-          <a href={proj.url} target='_blank' rel='noreferrer' className='projects-label'>
-            {proj.title}
-          </a>
-          <i
-            style={{ fontSize: '24px' }}
-            className="fab fa-github-alt project-git"
-            onClick={() => window.open(proj.git, '_blank', '')}
-          ></i>
-        </div>
-        <iframe title={proj.title} key={index} className='projects-iframe' src={proj.url}>
+  // const parsedProjs = projectsArr.map((proj, index) => {
+  //   return (
+  //     <div className='each-project' onClick={() => window.open(proj.url, '_blank', '')}>
+  //       <div className='project-label-container' >
+  //         <a href={proj.url} target='_blank' rel='noreferrer' className='projects-label'>
+  //           {proj.title}
+  //         </a>
+  //         <i
+  //           style={{ fontSize: '24px' }}
+  //           className="fab fa-github-alt project-git"
+  //           onClick={() => window.open(proj.git, '_blank', '')}
+  //         ></i>
+  //       </div>
+  //       <iframe title={proj.title} key={index} className='projects-iframe' src={proj.url}>
 
-        </iframe>
-      </div>
-    );
-  });
+  //       </iframe>
+  //     </div>
+  //   );
+  // });
 
   return (
     <div className='projects-layout'>
