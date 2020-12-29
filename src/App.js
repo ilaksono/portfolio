@@ -60,7 +60,7 @@ function App() {
         <Articles />
       }
       <Background />
-      <footer style={{ position: 'fixed', bottom: '0', left: 10 }}>
+      <footer style={{ position: 'fixed', bottom: '0', left: 10, color: 'rgb(14, 8, 37)' }}>
         2020 | Ian Laksono <i className="far fa-copyright"></i>
       </footer>
     </div>

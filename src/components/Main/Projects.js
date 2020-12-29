@@ -34,11 +34,11 @@ const Projects = () => {
     ...projectsArr,
     {
       img: `url('/jungle.png')`,
-      title: 'Scheduler - React & Express',
+      title: 'Jungle - Ruby On Rails',
       git: 'https://github.com/ilaksono/scheduler'
     }, {
       img: `url('/bs.png')`,
-      title: 'Scheduler - React & Express',
+      title: 'Battleship - JQuery & Express',
       git: 'https://github.com/ilaksono/scheduler'
     }
   ];
