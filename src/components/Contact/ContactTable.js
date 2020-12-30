@@ -80,7 +80,7 @@ const ContactTable = () => {
           onMouseOver={() => setAnim({ ...anim, resBounce: true })}
           onAnimationEnd={() => setAnim({ ...anim, resBounce: false })}
         >
-          <i class="fas fa-file"><b>:</b></i>
+          <i className="fas fa-file"><b>:</b></i>
         </div>
         <a
           href='https://www.canva.com/design/DAEMFk2Wk7o/2Uxu3K5ESEBRd2RSLpXW6A/view?utm_content=DAEMFk2Wk7o&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink'

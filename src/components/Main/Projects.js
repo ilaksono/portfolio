@@ -115,7 +115,7 @@ const Projects = () => {
       </div> */}
       <div className='projects-closing'>
         <a href='https://github.com/ilaksono' style={{ color: '#254a02'}}>
-          Visit my GitHub <i class="fab fa-github"></i>
+          Visit my GitHub <i className="fab fa-github"></i>
         </a>
       </div>
     </div>
