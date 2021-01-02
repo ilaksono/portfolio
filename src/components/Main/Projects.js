@@ -2,6 +2,11 @@ import DraggableList from './DraggableList';
 
 const projectsArr = [
   {
+    url: 'https://laksmail.herokuapp.com/',
+    title: 'Email Me - React Server Side Render',
+    git: 'https://github.com/ilaksono/email-api-node'
+  },
+  {
     url: 'https://ichatter.netlify.app/',
     title: 'Chatter - React & Express',
     git: 'https://github.com/ilaksono/chatter-react-express'
