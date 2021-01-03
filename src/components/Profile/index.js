@@ -32,7 +32,7 @@ const Profile = (props) => {
       <div className='prof-anec-container'>
         <div className='pic-container'>
           <div className='prof-pic-container'>
-            <img src='/prof.jpeg' alt='profile'
+            <img src='/prof.png' alt='profile'
               onClick={(event) => getPhotoModal(event)}
               className='prof-pic'
             >
