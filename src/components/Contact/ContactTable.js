@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import AppContext from 'AppContext';
 const contactDetails = [
   {
     iconCL: "fab fa-linkedin",
@@ -27,7 +28,9 @@ const initAnim = {
 
 const ContactTable = () => {
   const [anim, setAnim] = useState(initAnim);
-
+  const {
+    switchMode
+  } = useContext(AppContext);
 
   return (
     <div className='get-in-contact'>
@@ -56,8 +59,10 @@ const ContactTable = () => {
         >
           <i className="fas fa-envelope" >: </i>
         </div>
-        <a href='mailto: ian@laksono.net'
-          className='contact-link'>
+        <a href="#email"
+          className='contact-link'
+          onClick={() => switchMode('MAIN')}
+          >
           &nbsp;ian@laksono.net,
         </a>
         <div

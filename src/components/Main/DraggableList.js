@@ -52,7 +52,9 @@ export default function DraggableList({ items }) {
                   onClick={() => window.open(items[i].git, '_blank', '')}
                 ></i>
               </div>
-              <iframe title={items[i].title} key={i} className='projects-iframe' src={items[i].url}>
+              <iframe 
+                id={i === 0 ? 'email' : ''}
+              title={items[i].title} key={i} className='projects-iframe' src={items[i].url}>
 
               </iframe>
             </div> :

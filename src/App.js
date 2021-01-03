@@ -52,7 +52,10 @@ function App() {
       {
         visMode === 'CONTACT' &&
         <div>
-          <Contact pageAnim={history[history.length - 2] === 'ARTICLE' ? ' page-left' : ' page-right'} />
+          <Contact 
+          pageAnim={history[history.length - 2] === 'ARTICLE' ? ' page-left' : ' page-right'} 
+          
+          />
         </div>
       }
       {
