@@ -16,7 +16,7 @@ const initVis = {
   b: false,
   c: false,
   d: false
-}
+};
 const Profile = (props) => {
   const [visible, setVisible] = useState(initVis);
   const [bigPhoto, setBigPhoto] = useState(initBig);
@@ -48,10 +48,10 @@ const Profile = (props) => {
 
         <div className='anecdote'>
           <h4 className='h4-1'
-          style={{
-            opacity: visible.a ? '1' : '0'
-          }}
-          onAnimationStart={() => setVisible(prev => ({...prev, a: true}))}
+            style={{
+              opacity: visible.a ? '1' : '0'
+            }}
+            onAnimationStart={() => setVisible(prev => ({ ...prev, a: true }))}
           >
             Web Developer with natural talent
         </h4>
@@ -71,21 +71,22 @@ const Profile = (props) => {
           >
             Plays piano and loves snowboarding
         </h6>
-          <h6 className='punch-line'
-            onClick={() => props.switchMode('CONTACT')}
+          <a className='punch-line'
+            href="#email"
+            onClick={() => props.switchMode('MAIN')}
             style={{
               opacity: visible.d ? '1' : '0'
             }}
             onAnimationStart={() => setVisible(prev => ({ ...prev, d: true }))}
-            
-            >
+
+          >
 
             {
               rdy ?
                 <div className="containerA" onMouseOver={() => setBounce(true)}
-                onMouseOut={() => setBounce(false)}
+                  onMouseOut={() => setBounce(false)}
                 >
-                  <div className={`box${bounce ? ' bounce-inf' : '' }`} 
+                  <div className={`box${bounce ? ' bounce-inf' : ''}`}
                   >
 
                     <div className="title">
@@ -102,24 +103,20 @@ const Profile = (props) => {
                 </div>
                 :
                 <div className='smoky-con h4-1'>
-                  <span>H</span>
-                  <span>i</span>
-                  <span>r</span>
-                  <span>e &nbsp;</span>
-
-                  <span>m</span>
+                  <span>L</span>
                   <span>e</span>
-                  <span>, &nbsp;</span>
-                  <span>m</span>
-                  <span>a</span>
-                  <span>y</span>
-                  <span>b</span>
+                  <span>t'</span>
+                  <span>s &nbsp;</span>
+
+                  <span>C</span>
+                  <span>h</span>
+                  <span>a </span>
                   <span
                     onAnimationEnd={() => setRdy(true)}
-                  >e</span>
+                  >t</span>
                 </div>
             }
-          </h6>
+          </a>
         </div>
       </div>
       <div className='bg-container'>
