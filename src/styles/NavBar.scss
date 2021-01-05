@@ -4,7 +4,7 @@
   @include flexbox(row, space-between, center);
   height: 85px;
   padding-bottom: 2px;
-  background-color: $darkp;
+  background-color: rgb(19, 19, 19);
   color: white;
   opacity: 0.9;
   padding-left: 55px;
@@ -28,15 +28,15 @@
 
 .selected {
   border-radius: 50%;
-  border: 2px solid salmon;
-  color: salmon;
+  border: 2px solid rgb(177, 177, 177);
+  color: rgb(177, 177, 177);
   height: 60px;
   width: 60px;
   text-align: center;
 }
 .not-selected {
   border-radius: 50%;
-    border: 2px solid rgb(14, 8, 37);
+    border: 2px solid rgb(19, 19, 19);
 
   color: white;
   height: 60px;
