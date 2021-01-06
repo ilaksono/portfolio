@@ -70,7 +70,7 @@ const Projects = () => {
   return (
     <div className='projects-layout'>
 
-      <h2 className='main-title' style={{ backgroundColor: '#f2f2f2', color: 'rgb(14, 8, 37)'}}>
+      <h2 className='main-title' style={{ color: 'rgb(14, 8, 37)'}}>
         &lt;Projects&gt;
         </h2>
         <div className='current-proj'>

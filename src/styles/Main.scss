@@ -1,5 +1,5 @@
 @import './helpers.scss';
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 .main-layout {
   @include flexbox(row, flex-start, center);
   // background-color: $white;
@@ -118,7 +118,7 @@
   color:#6a6b73;
 }
 .current-proj {
-  background-color: #f2f2f2;
+  // background-color: #f2f2f2;
   width: 99%;
   // box-shadow: -2px 0 4px 2px grey;
   font-family: $font-stack;
@@ -128,7 +128,15 @@
   color: $lightb;
 }
 .skill-item {
-  margin: 15px;
+  padding: 15px;
+  width: 100%;
+  min-height: 115px;
+  @include flexbox(row, space-between, center)
+}
+.skill-title {
+  font-family: "Poppins";
+  font-size: 1.1em;
+  text-align: center;
 }
 .projects-label {
   cursor: pointer;
@@ -139,8 +147,8 @@
   margin-bottom: 10px;
 }
 .skill-logo {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 85px;
+  max-height: 85px;
   // background-color: $white;
 }
 .project-label-container {
@@ -223,6 +231,12 @@
   .each-project {
     width: auto;
   }
+  
+  .skill-item {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
 }
 @media screen and (max-width: 850px) {
 
@@ -243,7 +257,11 @@
     z-index: 2;
     border-radius: 10px;
     width: 10px;
+    
 
+  }
+  .specialty-layout {
+    margin-top:400px;
   }
  
   .main-layout::-webkit-scrollbar-thumb {
@@ -261,6 +279,7 @@
     background-color:red;
 
   }
+  
 }
 
 

@@ -1,16 +1,26 @@
 import 'styles/ScrollBar.scss';
 import skillsArr from 'data/skills.js';
-
 const Specialty = () => {
   const parsedSkills = skillsArr.map((skill, index) => {
     return (
-      <div className='skill-item' key={index}>
+      <div className='skill-item' key={skill.title}
+      style={{
+        borderColor: (index === 3 
+          || index === 7 || index === 10 || index === 13||index === 16) ? '#eaeaea': '',
+        borderBottomWidth: (index === 3 || index === 7 || index === 10 || index === 13 || index === 16) ? "2px" : "0px",
+        borderBottomStyle: "solid"
+      }}
+      >
         <img
           src={skill.url}
           alt={skill.title}
           key={index}
           className='skill-logo'
         />
+        <div className="skill-title">
+          {skill.title}
+        </div>
+
       </div>
     );
   });
