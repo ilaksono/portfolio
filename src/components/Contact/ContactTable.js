@@ -34,7 +34,7 @@ const ContactTable = () => {
 
   return (
     <div className='get-in-contact'>
-      <h1 className='main-title'>setContact(&#123;
+      <h1 className='main-title'>Contact
       </h1>
       <div className='contact-div'>
         <div
@@ -50,7 +50,7 @@ const ContactTable = () => {
           rel='noreferrer'
           className='contact-link'
         >
-          @i-laksono,
+          @ian-laksono
         </a>
         <div
           className={`${anim.mailBounce ? 'work-bounce' : ''}`}
@@ -63,7 +63,7 @@ const ContactTable = () => {
           className='contact-link'
           onClick={() => switchMode('MAIN')}
           >
-          &nbsp;ian@laksono.net,
+          &nbsp;ian@laksono.net
         </a>
         <div
           className={`${anim.gitBounce ? 'work-bounce' : ''}`}
@@ -78,7 +78,7 @@ const ContactTable = () => {
           rel='noreferrer'
           className='contact-link'
         >
-          @ilaksono,
+          @ilaksono
         </a>
         <div
           className={`${anim.resBounce ? 'work-bounce' : ''}`}
@@ -94,14 +94,14 @@ const ContactTable = () => {
           className='contact-link'
         >
           <span style={{ display: 'inline-block' }}>
-            <span className='parentheses'>()&nbsp;=&gt;&nbsp;</span>
-            <span>getResume</span>
-            <span className='parentheses'>()</span>
+            <span className='parentheses'></span>
+            <span>CV</span>
+            <span className='parentheses'></span>
           </span>
         </a>
 
       </div>
-      <h1 className='closing'>&#125;);</h1>
+      {/* <h1 className='closing'>&#125;);</h1> */}
     </div>
   );
 };
