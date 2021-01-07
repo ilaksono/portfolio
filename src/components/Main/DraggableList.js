@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import clamp from 'lodash-es/clamp';
 import swap from 'lodash-move';
 import { useGesture } from 'react-use-gesture';
 import { useSprings, animated, interpolate } from 'react-spring';
 import './styles.css';
-
+import LoadSpinner from 'components/LoadSpinner';
 // Returns fitting styles for dragged/idle items
 const fn = (order, down, originalIndex, curIndex, y) => index =>
   down && index === originalIndex
@@ -12,6 +12,7 @@ const fn = (order, down, originalIndex, curIndex, y) => index =>
     : { y: order.indexOf(index) * 100, scale: 1, zIndex: '0', shadow: 1, immediate: false };
 
 export default function DraggableList({ items }) {
+  const [load, setLoad] = useState(false)
   const order = useRef(items.map((_, index) => index)); // Store indicies as a local ref, this represents the item order
   const [springs, setSprings] = useSprings(items.length, fn(order.current)); // Create springs, each corresponds to an item, controlling its transform, scale, etc.
   const bind = useGesture(({ args: [originalIndex], down, delta: [, y] }) => {
@@ -52,10 +53,14 @@ export default function DraggableList({ items }) {
                   onClick={() => window.open(items[i].git, '_blank', '')}
                 ></i>
               </div>
+              {!load && <LoadSpinner />} 
               <iframe 
                 id={i === 0 ? 'email' : ''}
-              title={items[i].title} key={i} className='projects-iframe' src={items[i].url}>
-
+              title={items[i].title} key={i} 
+              className='projects-iframe' src={items[i].url}
+                onLoad={() => setLoad(true)}
+              >
+                
               </iframe>
             </div> :
               <div className='each-project' onClick={() => window.open(items[i].git, '_blank', '')}>
