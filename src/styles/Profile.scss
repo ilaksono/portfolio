@@ -152,4 +152,21 @@
     width:50vw;
     height: 50vw;
   }
+}
+@media (min-height: 1023px) and (max-width: 1867px) {
+  .background-pic {
+    width: 50vw;
+    justify-self: flex-end; 
+    height: 50vw;
+  }
+  .bg-spacer {
+    width: 50vw;
+    justify-self: flex-end;
+  }
+  .bg-container {
+    display: flex;
+    justify-content: flex-end;
+    width:50vw;
+    height: 50vw;
+  }
 } 

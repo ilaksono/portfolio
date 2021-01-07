@@ -81,6 +81,11 @@ const Projects = () => {
           </a>
           <div style={{ backgroundImage: `url('/Chart-Page (1).png')` }} src='/Chart-Page (1).png' alt='battleship' className='jungle-screen'></div>
         </div>
+        <div className='projects-closing'>
+        <a href='https://github.com/ilaksono' style={{ color: '#254a02'}}>
+          Visit my GitHub <i className="fab fa-github"></i>
+        </a>
+      </div>
           </div>
           
 
@@ -118,11 +123,7 @@ const Projects = () => {
         </div>
         <div style={{ backgroundImage: `url('/bs.png')` }} src='/bs.png' alt='battleship' className='jungle-screen'></div>
       </div> */}
-      <div className='projects-closing'>
-        <a href='https://github.com/ilaksono' style={{ color: '#254a02'}}>
-          Visit my GitHub <i className="fab fa-github"></i>
-        </a>
-      </div>
+      
     </div>
   );
 };

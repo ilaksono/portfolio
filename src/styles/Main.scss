@@ -185,10 +185,12 @@
   
 }
 .projects-closing {
-  margin-bottom: 25px;
+  // margin-bottom: 25px;
   // position: fixed;
   z-index: 2;
   color: $darkp;
+  text-align: center;
+  // padding-top: 1%;
 }
 
 @media screen and (min-width: 851px) {
@@ -204,8 +206,8 @@
     scroll-padding-top: 4px;
   }
   .projects-closing {
-    position: relative;
-    top: -70px;
+    // position: relative;
+    // top: -70px;
   }
   .each-project {
     margin-bottom: 0;
@@ -218,6 +220,12 @@
   }
   
 }
+@media screen and (min-width: 1401px) {
+  .projects-closing {
+    // justify-self: flex-end;
+  }
+}
+
 @media (max-width: 850px) and (min-width: 401px) {
   .projects-layout {
     margin-top: 2px;
@@ -235,6 +243,9 @@
   .skill-item {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .project-closing {
+    margin-top: -10px;
   }
   
 }
