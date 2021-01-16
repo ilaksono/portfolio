@@ -7,3 +7,6 @@
 - SCSS & CSS Animations
 
 Designed and Built By Myself (Ian Laksono)
+
+Additional Features:
+- swipe scroll
