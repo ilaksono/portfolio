@@ -15,8 +15,8 @@ const Articles = () => {
   }, []);
   let parsedArts = [];
   if (arts.length) {
-    parsedArts = arts.map(art => {
-      return <ArticleItem art={art}/>
+    parsedArts = arts.map((art, i) => {
+      return <ArticleItem art={art} key={i}/>
         
     });
   }

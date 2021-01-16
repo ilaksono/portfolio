@@ -10,7 +10,7 @@ const Contact = (props) => {
           <iframe title='resume'
             src='/IanLaksonoRe.pdf'
             className='res-embed'
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen
           >
           </iframe>
         </>
