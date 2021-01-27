@@ -2,6 +2,11 @@ import DraggableList from './DraggableList';
 
 const projectsArr = [
   {
+    url: 'https://shoppies-il.herokuapp.com/',
+    title: 'Shoppies - React-MUI, Express, PGSQL',
+    git: 'https://github.com/ilaksono/shoppies-react-express'
+  },
+  {
     url: 'https://laksmail.herokuapp.com/',
     title: 'Email Me - React Server Side Render',
     git: 'https://github.com/ilaksono/email-api-node'
