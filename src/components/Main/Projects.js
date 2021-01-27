@@ -2,7 +2,7 @@ import DraggableList from './DraggableList';
 
 const projectsArr = [
   {
-    url: 'https://shoppies-il.herokuapp.com/',
+    url: 'https://shoppies-il.netlify.app/',
     title: 'Shoppies - React-MUI, Express, PGSQL',
     git: 'https://github.com/ilaksono/shoppies-react-express'
   },
