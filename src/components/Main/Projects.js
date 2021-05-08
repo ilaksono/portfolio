@@ -2,6 +2,11 @@ import DraggableList from './DraggableList';
 
 const projectsArr = [
   {
+    url: 'https://smhmstaging.herokuapp.com',
+    title: 'SeeMeHireMe Hiring Solutions',
+    // git: ''
+  },
+  {
     url: 'https://shoppies-il.netlify.app/',
     title: 'Shoppies - React-MUI, Express, PGSQL',
     git: 'https://github.com/ilaksono/shoppies-react-express'
@@ -43,6 +48,11 @@ const Projects = () => {
   const fullList = [
     ...projectsArr,
     {
+      img: `url('/Chart-Page (1).png')`,
+      git: 'https://github.com/ilaksono/trader-react-express',
+      title: 'Trader - Stock Data, Trading, and Tracking'
+    },
+    {
       img: `url('/jungle.png')`,
       title: 'Jungle - Ruby On Rails',
       git: 'https://github.com/ilaksono/scheduler'
@@ -50,7 +60,8 @@ const Projects = () => {
       img: `url('/bs.png')`,
       title: 'Battleship - JQuery & Express',
       git: 'https://github.com/ilaksono/scheduler'
-    }
+    },
+
   ];
   // const parsedProjs = projectsArr.map((proj, index) => {
   //   return (
@@ -75,24 +86,25 @@ const Projects = () => {
   return (
     <div className='projects-layout'>
 
-      <h2 className='main-title' style={{ color: 'rgb(14, 8, 37)'}}>
+      <h2 className='main-title' style={{ color: 'rgb(14, 8, 37)' }}>
         &lt;Projects&gt;
         </h2>
-        <div className='current-proj'>
-        <div className='each-project' onClick={() => window.open('https://github.com/ilaksono/trader-react-express', '_blank', '')}>
+      <div className='current-proj'>
+        <div className='each-project' onClick={() => window.open('http://junglo.xyz', '_blank', '')}>
           <div className='current-text'>CURRENTLY BUILDING</div>
-          <a href='https://github.com/ilaksono/trader-react-express' target='_blank' rel='noreferrer'>
-            <div className='current-text'> TRADER <i className="fas fa-signal"></i></div>
+          <a>
+            <div className='current-text'> JUNGLO <i className="fas fa-signal"></i></div>
           </a>
-          <div style={{ backgroundImage: `url('/Chart-Page (1).png')` }} src='/Chart-Page (1).png' alt='battleship' className='jungle-screen'></div>
+          <div style={{ backgroundImage: `url('/junglo.png')` }} src='/Chart-Page (1).png' 
+          alt='battleship' className='jungle-screen'></div>
         </div>
         <div className='projects-closing'>
           <a href='https://github.com/ilaksono' style={{ color: '#254a02' }}>
             Visit my GitHub <i className="fab fa-github"></i>
           </a>
         </div>
-          </div>
-          
+      </div>
+
 
 
 
@@ -128,7 +140,7 @@ const Projects = () => {
         </div>
         <div style={{ backgroundImage: `url('/bs.png')` }} src='/bs.png' alt='battleship' className='jungle-screen'></div>
       </div> */}
-      
+
     </div>
   );
 };

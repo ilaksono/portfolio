@@ -3,6 +3,16 @@ import {useState} from 'react';
 
 const workArr = [
   {
+    url: '/logo-smhm-large.png',
+    title: 'SeeMeHireMe',
+    name: 'smhm'
+  },
+  {
+    url: 'https://cdn.imweb.me/thumbnail/20210320/1e3942eeb16ce.png',
+    title:'Junglo',
+    name:'junglo'
+  },
+  {
     url: 'https://pbs.twimg.com/profile_images/1197911268939550720/33RhGxsO_400x400.jpg',
     title: 'Lighthouse Labs',
     name:'lhl'
@@ -29,7 +39,8 @@ const initAnim = {
   lhl: false,
   arima: false,
   jhs: false,
-  afw: false
+  afw: false,
+  smhm: false
 }
 
 const Work = () => {

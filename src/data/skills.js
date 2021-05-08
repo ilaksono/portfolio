@@ -16,6 +16,10 @@ const skillsArr = [
     title: "Material UI"
   },
   {
+    url:'/laravel.png',
+    title:'Laravel'
+  },
+  {
     url: '/express.png',
     title: 'Express'
   },

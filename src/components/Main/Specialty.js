@@ -11,15 +11,20 @@ const Specialty = () => {
         borderBottomStyle: "solid"
       }}
       >
+        <a
+        data-toggle='tooltip'
+        title={skill.title}
+        >
         <img
           src={skill.url}
           alt={skill.title}
           key={index}
           className='skill-logo'
-        />
-        <div className="skill-title">
-          {skill.title}
-        </div>
+          />
+          </a>
+        {/* <div className="skill-title"> */}
+          {/* {skill.title} */}
+        {/* </div> */}
 
       </div>
     );

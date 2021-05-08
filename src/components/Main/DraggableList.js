@@ -47,33 +47,39 @@ export default function DraggableList({ items }) {
                 <a href={items[i].url} target='_blank' rel='noreferrer' className='projects-label'>
                   {items[i].title}
                 </a>
-                <i
-                  style={{ fontSize: '24px' }}
-                  className="fab fa-github-alt project-git"
-                  onClick={() => window.open(items[i].git, '_blank', '')}
-                ></i>
+                {
+                  items[i].git &&
+                  <i
+                    style={{ fontSize: '24px' }}
+                    className="fab fa-github-alt project-git"
+                    onClick={() => window.open(items[i].git, '_blank', '')}
+                  ></i>
+                }
               </div>
-              {!load && <LoadSpinner />} 
-              <iframe 
+              {!load && <LoadSpinner />}
+              <iframe
                 id={i === 0 ? 'email' : ''}
-              title={items[i].title} key={i} 
-              className='projects-iframe' src={items[i].url}
+                title={items[i].title} key={i}
+                className='projects-iframe' src={items[i].url}
                 onLoad={() => setLoad(true)}
               >
-                
+
               </iframe>
             </div> :
               <div className='each-project' onClick={() => window.open(items[i].git, '_blank', '')}>
 
                 <div className='project-label-container'>
                   <a className='projects-label' href={items[i].git}>{items[i].title}</a>
-                  <i
-                    style={{ fontSize: '24px' }}
-                    className="fab fa-github-alt project-git"
-
-                  ></i>
+                  {
+                    items[i].git &&
+                    <i
+                      style={{ fontSize: '24px' }}
+                      className="fab fa-github-alt project-git"
+                    ></i>
+                  }
                 </div>
-                <div style={{ backgroundImage: items[i].img }} src='/jungle.png' alt='jungle' className='jungle-screen'></div>
+                <div style={{ backgroundImage: items[i].img, }}
+                  className='jungle-screen'></div>
               </div>
             }
           />
