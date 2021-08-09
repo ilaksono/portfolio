@@ -1,13 +1,24 @@
 import NavBar from 'components/NavBar';
-import { useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import AppContext from 'AppContext';
-import Main from 'components/Main';
-import Profile from 'components/Profile';
-import Contact from 'components/Contact';
 import { useCookies } from 'react-cookie';
-import Articles from 'components/Articles';
 import 'styles/Background.scss';
 import Background from 'components/Background.js';
+
+
+import LazyWrapper from 'components/LoadSpinner/LazyWrapper';
+
+// import Main from 'components/Main';
+// import Profile from 'components/Profile';
+// import Contact from 'components/Contact';
+// import Articles from 'components/Articles';
+const Main = React.lazy(() => import('components/Main'));
+const Profile = React.lazy(() => import('components/Profile'));
+const Contact = React.lazy(() => import('components/Contact'));
+const Articles = React.lazy(() => import('components/Articles'));
+
+
+
 function App() {
 
   const [cookies, setCookie, removeCookie] = useCookies(['mode']);
@@ -34,36 +45,47 @@ function App() {
       {
         visMode === 'PROFILE' &&
         <div>
-          <Profile
-            switchMode={switchMode}
-            pageAnim=' page-left' />
+          <LazyWrapper>
+
+            <Profile
+              switchMode={switchMode}
+              pageAnim=' page-left' />
+          </LazyWrapper>
         </div>
       }
       {
         visMode === 'MAIN' &&
         <div>
-          <Main 
-            pageAnim=
-            {(history[history.length - 2] === 'CONTACT' || history[history.length - 2] === 'ARTICLE')
-              ? ' page-left' : ' page-right'}/>
+          <LazyWrapper>
+
+            <Main
+              pageAnim=
+              {(history[history.length - 2] === 'CONTACT' || history[history.length - 2] === 'ARTICLE')
+                ? ' page-left' : ' page-right'} />
+          </LazyWrapper>
         </div>
       }
 
       {
         visMode === 'CONTACT' &&
         <div>
-          <Contact 
-          pageAnim={history[history.length - 2] === 'ARTICLE' ? ' page-left' : ' page-right'} 
-          
-          />
+          <LazyWrapper>
+
+            <Contact
+              pageAnim={history[history.length - 2] === 'ARTICLE' ? ' page-left' : ' page-right'}
+
+            />
+          </LazyWrapper>
         </div>
       }
       {
         visMode === 'ARTICLE' &&
-        <Articles />
+        <LazyWrapper>
+          <Articles />
+        </LazyWrapper>
       }
       <Background />
-      <footer style={{ position: 'fixed', bottom: '0', left: 10, color: 'rgb(14, 8, 37)' }}>
+      <footer style={{ position: 'absolute', color: 'rgb(14, 8, 37)' }}>
         2021 | Ian Laksono <i className="far fa-copyright"></i>
       </footer>
     </div>

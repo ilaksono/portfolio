@@ -35,7 +35,6 @@ const Specialty = () => {
         &lt;Stack&gt;
       </h2>
       {parsedSkills}
-
     </div>
   );
 };

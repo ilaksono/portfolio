@@ -24,7 +24,6 @@ ReactDOM.render(
     <CookiesProvider>
       <AppProvider>
         <MuiThemeProvider theme={theme}>
-
           <App />
         </MuiThemeProvider>
       </AppProvider>

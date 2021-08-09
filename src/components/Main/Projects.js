@@ -2,7 +2,7 @@ import DraggableList from './DraggableList';
 
 const projectsArr = [
   {
-    url: 'https://smhmstaging.herokuapp.com',
+    url: 'https://seemehireme.com',
     title: 'SeeMeHireMe Hiring Solutions',
     // git: ''
   },

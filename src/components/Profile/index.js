@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import PhotoModal from './PhotoModal';
 import 'styles/Profile.scss';
 import 'styles/Smoky.scss';
@@ -17,6 +17,13 @@ const initVis = {
   c: false,
   d: false
 };
+
+const setNodeDimensions = (node, w, h) => {
+  node.style.maxHeight = h;
+  node.style.maxWidth = w;
+  return true;
+}
+
 const Profile = (props) => {
   const [visible, setVisible] = useState(initVis);
   const [bigPhoto, setBigPhoto] = useState(initBig);
@@ -27,6 +34,14 @@ const Profile = (props) => {
     const url = event.target.getAttribute('src');
     setBigPhoto({ mode: true, url });
   };
+
+  const divRef = useRef();
+  if (divRef.current) {
+    if (window.innerWidth < 1270) {
+      setNodeDimensions(divRef.current, window.innerWidth / 2, window.innerWidth / 2);
+    }
+  }
+
   return (
     <div className={`profile-layout${props.pageAnim}`}>
       <div className='prof-anec-container'>
@@ -54,7 +69,7 @@ const Profile = (props) => {
             onAnimationStart={() => setVisible(prev => ({ ...prev, a: true }))}
           >
             Web Developer with natural talent
-        </h4>
+          </h4>
           <h5 className='h4-1'
             style={{
               opacity: visible.b ? '1' : '0'
@@ -62,7 +77,7 @@ const Profile = (props) => {
             onAnimationStart={() => setVisible(prev => ({ ...prev, b: true }))}
           >
             Background in Chemical Engineering
-        </h5>
+          </h5>
           <h6 className='h6-1'
             style={{
               opacity: visible.c ? '1' : '0'
@@ -70,7 +85,7 @@ const Profile = (props) => {
             onAnimationStart={() => setVisible(prev => ({ ...prev, c: true }))}
           >
             Plays piano and loves snowboarding
-        </h6>
+          </h6>
           <a className='punch-line'
             href="#email"
             onClick={() => props.switchMode('MAIN')}
@@ -119,7 +134,9 @@ const Profile = (props) => {
           </a>
         </div>
       </div>
-      <div className='bg-container'>
+      <div
+        ref={divRef}
+        className='bg-container'>
         <img src='/background.jpg' alt='background'
           onClick={(event) => getPhotoModal(event)}
           className='background-pic'

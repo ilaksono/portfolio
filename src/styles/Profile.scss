@@ -27,8 +27,8 @@
   align-self: flex-start;
 }
 .bg-container {
-  height: calc(100vh - 85px);
-  width: calc(100vh - 85px);
+  // height: calc(100vh - 85px);
+  // width: calc(100vh - 85px);
   position: fixed;
   right: 0;
   z-index: 0;
@@ -130,10 +130,19 @@
     margin-left: 50px;
   }
 }
+footer {
+  bottom: 0px;
+  right: 18px;
+}
 @media screen and (max-width: 650px) {
   .punch-line {
     text-align: left;
     margin-left: -130px;
+  }
+  footer {
+    top: 0;
+    bottom: auto;
+    left: auto;
   }
 }
 @media (min-height: 1023px) and (max-width: 1367px) {
@@ -145,12 +154,6 @@
   .bg-spacer {
     width: 50vw;
     justify-self: flex-end;
-  }
-  .bg-container {
-    display: flex;
-    justify-content: flex-end;
-    width:50vw;
-    height: 50vw;
   }
 }
 @media (min-height: 1023px) and (max-width: 1867px) {

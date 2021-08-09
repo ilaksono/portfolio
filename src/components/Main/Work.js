@@ -13,7 +13,7 @@ const workArr = [
     name:'junglo'
   },
   {
-    url: 'https://pbs.twimg.com/profile_images/1197911268939550720/33RhGxsO_400x400.jpg',
+    url: 'https://coursereport-production.imgix.net/uploads/school/logo/46/original/lighthouse-labs-logo-compressor.png?w=200&h=200',
     title: 'Lighthouse Labs',
     name:'lhl'
   },
