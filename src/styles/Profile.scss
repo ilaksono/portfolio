@@ -1,15 +1,67 @@
-@import './helpers.scss';
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+@import "./helpers.scss";
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap");
 
+$url: 'background.jpg';
+$w: 85vmin;
+$h: 65vmin;
+$f: .25;
 .profile-layout {
+  overflow-y: hidden;
   // background-color: $white;
   height: calc(100vh - 85px);
   padding: 35px;
   @include flexbox(row, flex-start, center);
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
+.assembly-wrapper {
+  margin: 0;
+  height: 100vh;
+  position: relative;
+  right: -370px;
+  perspective: 125vmin;
+  -webkit-filter: drop-shadow(-1vmin 1vmin 1vmin #000);
+  div {
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  .assembly {
+    top: 50%;
+    left: calc(50% - 0.5 * var(--dx) *#{$w});
+    transform: rotatey(35deg);
+  }
 
+  .panel {
+    --mid: calc((var(--p) + var(--k) *#{$f}) *#{$w});
+    transform: translate3d(calc(var(--dx) *#{$w}), 0, calc(var(--dz) *#{$w}));
+
+    &:before,
+    &:after {
+      position: absolute;
+      margin: -0.5 * $h (-0.5 * $w);
+      width: $w;
+      height: $h;
+      background: url($url) 50% / cover;
+      content: "";
+    }
+
+    &:before {
+      transform-origin: var(--mid);
+      transform: rotatey(-90deg);
+      clip-path: inset(0 calc(100% - var(--mid)) 0 calc(var(--p) * 100%));
+      filter: brightness(0.4);
+    }
+
+    &:after {
+      clip-path: inset(0 calc(100% - (var(--p) + var(--k)) *#{$w}) 0 var(--mid));
+    }
+  }
+}
+.prof-pic-container {
+  background-color: #DDD;
+  padding: 5px;
+  border-radius: 28px;
+}
 .prof-pic {
   border-radius: 50%;
   height: 140px;
@@ -47,26 +99,24 @@
   margin-left: 100px;
   margin-top: 75px;
   z-index: 1;
-
-
 }
 .anecdote h4 {
   animation: fadeInLeft 1s 1;
-  animation-delay: 0.5s; 
+  animation-delay: 0.5s;
 }
 .anecdote h5 {
   animation: fadeInLeft 1s 1;
-  animation-delay: 1.5s; 
+  animation-delay: 1.5s;
 }
 .anecdote .h6-1 {
   animation: fadeInLeft 1s 1;
-  animation-delay: 2.5s; 
+  animation-delay: 2.5s;
 }
 .anecdote .smoky-con {
   animation: fadeInLeft 1s 1;
-  animation-delay: 3.5s; 
+  animation-delay: 3.5s;
 }
-  
+
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -85,10 +135,9 @@
   position: relative;
   right: 0;
   z-index: -1;
-
 }
 .name-header {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-align: center;
   font-size: 60px;
 }
@@ -103,10 +152,10 @@
 
 @media screen and (max-width: 1030px) {
   // .profile-layout {
-  
+
   //   @include flexbox(column, center, flex-start);
   // }
-  .bg-container {
+  .bg-container, .assembly-wrapper {
     display: none;
   }
   .bg-spacer {
@@ -148,7 +197,7 @@ footer {
 @media (min-height: 1023px) and (max-width: 1367px) {
   .background-pic {
     width: 50vw;
-    justify-self: flex-end; 
+    justify-self: flex-end;
     height: 50vw;
   }
   .bg-spacer {
@@ -159,7 +208,7 @@ footer {
 @media (min-height: 1023px) and (max-width: 1867px) {
   .background-pic {
     width: 50vw;
-    justify-self: flex-end; 
+    justify-self: flex-end;
     height: 50vw;
   }
   .bg-spacer {
@@ -169,7 +218,7 @@ footer {
   .bg-container {
     display: flex;
     justify-content: flex-end;
-    width:50vw;
+    width: 50vw;
     height: 50vw;
   }
-} 
+}
