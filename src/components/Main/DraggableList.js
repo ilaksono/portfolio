@@ -66,7 +66,7 @@ export default function DraggableList({ items }) {
 
               </iframe>
             </div> :
-              <div className='each-project' onClick={() => window.open(items[i].git, '_blank', '')}>
+              <div className='each-project' onClick={() => items[i].callback ? items[i].callback() : window.open(items[i].git, '_blank', '')}>
 
                 <div className='project-label-container'>
                   <a className='projects-label' href={items[i].git}>{items[i].title}</a>

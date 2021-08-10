@@ -1,35 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/il.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Ian Laksono's work, project, and academic experience in Engineering and Full Stack Development."
-    />
-   <meta name="keywords" content="Ian,Laksono,Web, developer, development, full, stack,engineer,,review,friend,canada, ontario, toronto, GTA, richmond, hill">
-    <meta
-      name='DC.title'
-      content="Ian Laksono's Full Stack Development Portfolio built using React"
-    />
-    <link rel='canonical' href='https://www.laks.ca'/>
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/il.png" />
-    
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <!--
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/il.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+
+  <meta name="description"
+    content="Ian Laksono's work, project, and academic experience in Engineering and Full Stack Development." />
+  <meta name="keywords"
+    content="Ian,Laksono,Web, developer, development, full, stack,engineer,,review,friend,canada, ontario, toronto, GTA, richmond, hill">
+  <meta name='DC.title' content="Ian Laksono's Full Stack Development Portfolio built using React" />
+
+  <style>
+    #load-overlay {
+      display: flex;
+      justify-content: center;
+    }
+
+    .lds-ring {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      justify-self: center;
+      align-self: center;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    .lds-ring div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      margin: 8px;
+      border: 8px solid #e46f16;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #e46f16 transparent transparent transparent;
+    }
+
+    .lds-ring div:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+
+    .lds-ring div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+
+
+    @keyframes lds-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <div id="load-overlay"
+    style="background-color:#333; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;">
+    <div class='lds-ring'>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <link rel='canonical' href='https://www.laks.ca' />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/il.png" />
+
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-    <script async defer src="https://kit.fontawesome.com/4dbd3cae3b.js"></script>
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <script async defer src="https://kit.fontawesome.com/4dbd3cae3b.js"></script>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -38,12 +101,12 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Ian Laksono</title>
-  </head>
-  <body>
-    <noscript>Ian Laksono's Portfolio</noscript>
-    <div id="root"></div>
-    <!--
+  <title>Ian Laksono</title>
+</head>
+<body>
+  <noscript>Ian Laksono's Portfolio</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -53,8 +116,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    
-  </body>
-    <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+
+</body>
+<script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
 
 </html>

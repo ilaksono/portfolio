@@ -35,6 +35,8 @@ function App() {
   useEffect(() => {
     if (cookies.mode)
       switchMode(cookies.mode);
+    const node = document.querySelector('#load-overlay');
+    node.remove();
   }, []);
 
 

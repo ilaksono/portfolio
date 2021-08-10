@@ -7,6 +7,7 @@ const Projects = () => {
     {
       img: `url('/smhm.png')`,
       title: 'SeeMeHireMe Hiring Solutions',
+      callback: () => window.open('https://seemehireme.com', '_blank', '')
     },
     ...projectsArr,
     {
