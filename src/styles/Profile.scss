@@ -1,10 +1,10 @@
 @import "./helpers.scss";
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap");
 
-$url: 'background.jpg';
-$w: 85vmin;
+$url: "background.jpg";
+$w: 75vmin;
 $h: 65vmin;
-$f: .25;
+$f: 0.25;
 .profile-layout {
   overflow-y: hidden;
   // background-color: $white;
@@ -21,6 +21,9 @@ $f: .25;
   right: -370px;
   perspective: 125vmin;
   -webkit-filter: drop-shadow(-1vmin 1vmin 1vmin #000);
+  opacity: 0;
+  animation: hideInitial 3s 1 forwards;
+  animation-delay: 2.2s;
   div {
     position: absolute;
     transform-style: preserve-3d;
@@ -29,11 +32,30 @@ $f: .25;
     top: 50%;
     left: calc(50% - 0.5 * var(--dx) *#{$w});
     transform: rotatey(35deg);
+    transition: ease-in-out;
+    // visibility: hidden;
+    // animation: hideInitial 1s 1 forwards;
+    // animation-delay: 2s;
+  }
+  .first {
+    // opacity: 0;
+    // animation: hideInitial 3s 1 forwards;
+    // animation-delay: 1.5s;
+  }
+  .second {
+    // opacity: 0;
+    // animation: hideInitial 3s 1 forwards;
+    // animation-delay: 1.8s;
+  }
+  .third {
+    // opacity: 0;
+    // animation: hideInitial 3s 1 forwards;
+    // animation-delay: 2.1s;
   }
 
   .panel {
     --mid: calc((var(--p) + var(--k) *#{$f}) *#{$w});
-    transform: translate3d(calc(var(--dx) *#{$w}), 0, calc(var(--dz) *#{$w}));
+    // transform: translate3d(calc(var(--dx) *#{$w}), 0, calc(var(--dz) *#{$w}));
 
     &:before,
     &:after {
@@ -57,10 +79,33 @@ $f: .25;
     }
   }
 }
+
+@keyframes hideInitial {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(60vw);
+  }
+  99% {
+    transform: translateX(10vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
 .prof-pic-container {
-  background-color: #DDD;
+  background-color: #ddd;
   padding: 5px;
   border-radius: 28px;
+  opacity: 0;
+  animation: hideInitial 3s 1 forwards;
 }
 .prof-pic {
   border-radius: 50%;
@@ -155,7 +200,8 @@ $f: .25;
 
   //   @include flexbox(column, center, flex-start);
   // }
-  .bg-container, .assembly-wrapper {
+  .bg-container,
+  .assembly-wrapper {
     display: none;
   }
   .bg-spacer {

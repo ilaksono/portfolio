@@ -137,9 +137,9 @@ const Profile = (props) => {
       <div className='assembly-wrapper'>
 
       <div className="assembly" style={{"--dx": 0}}>
-        <div className="panel" style={{"--i": 0, "--k": 0.25, "--p": 0, "--dx": 0, "--dz": -0.2}}></div>
-        <div className="panel" style={{"--i": 1, "--k": 0.5, "--p": 0.25, "--dx": -0.1, "--dz": 0}}></div>
-        <div className="panel" style={{"--i": 2, "--k": 0.25, "--p": 0.75, "--dx": 0, "--dz": 0}}></div>
+        <div className="panel first" style={{"--i": 0, "--k": 0.25, "--p": 0, "--dx": 0, "--dz": -0.2}}></div>
+        <div className="panel second" style={{"--i": 1, "--k": 0.5, "--p": 0.25, "--dx": -0.1, "--dz": 0}}></div>
+        <div className="panel third" style={{"--i": 2, "--k": 0.25, "--p": 0.75, "--dx": 0, "--dz": 0}}></div>
       </div>
       </div>
       {/* <div
