@@ -1,11 +1,7 @@
 import DraggableList from './DraggableList';
 
 const projectsArr = [
-  {
-    url: 'https://seemehireme.com',
-    title: 'SeeMeHireMe Hiring Solutions',
-    // git: ''
-  },
+  
   {
     url: 'https://shoppies-il.netlify.app/',
     title: 'Shoppies - React-MUI, Express, PGSQL',
@@ -46,9 +42,13 @@ const projectsArr = [
 
 const Projects = () => {
   const fullList = [
+    {
+      img: `url('/smhm.png')`,
+      title: 'SeeMeHireMe Hiring Solutions',
+    },
     ...projectsArr,
     {
-      img: `url('/Chart-Page (1).png')`,
+      img: `url('/chart-page.png')`,
       git: 'https://github.com/ilaksono/trader-react-express',
       title: 'Trader - Stock Data, Trading, and Tracking'
     },
