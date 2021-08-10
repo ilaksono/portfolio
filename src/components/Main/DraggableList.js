@@ -5,6 +5,7 @@ import { useGesture } from 'react-use-gesture';
 import { useSprings, animated, interpolate } from 'react-spring';
 import './styles.css';
 import LoadSpinner from 'components/LoadSpinner';
+
 // Returns fitting styles for dragged/idle items
 const fn = (order, down, originalIndex, curIndex, y) => index =>
   down && index === originalIndex
@@ -22,7 +23,6 @@ export default function DraggableList({ items }) {
     setSprings(fn(newOrder, down, originalIndex, curIndex, y)); // Feed springs new style data, they'll animate the view without causing a single render
     if (!down) order.current = newOrder;
   });
-  // console.log(bind(0));
   return (
     <div className="content" style={{ height: items.length * 500 }}>
       {

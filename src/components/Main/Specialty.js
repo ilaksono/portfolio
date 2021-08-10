@@ -4,28 +4,24 @@ const Specialty = () => {
   const parsedSkills = skillsArr.map((skill, index) => {
     return (
       <div className='skill-item' key={skill.title}
-      style={{
-        borderColor: (index === 3 
-          || index === 7 || index === 10 || index === 13||index === 16) ? '#eaeaea': '',
-        borderBottomWidth: (index === 3 || index === 7 || index === 10 || index === 13 || index === 16) ? "2px" : "0px",
-        borderBottomStyle: "solid"
-      }}
+        style={{
+          borderColor: (index === 3
+            || index === 7 || index === 10 || index === 13 || index === 16) ? '#eaeaea' : '',
+          borderBottomWidth: (index === 3 || index === 7 || index === 10 || index === 13 || index === 16) ? "2px" : "0px",
+          borderBottomStyle: "solid"
+        }}
       >
         <a
-        data-toggle='tooltip'
-        title={skill.title}
+          data-toggle='tooltip'
+          title={skill.title}
         >
-        <img
-          src={skill.url}
-          alt={skill.title}
-          key={index}
-          className='skill-logo'
+          <img
+            src={skill.url}
+            alt={skill.title}
+            key={index}
+            className='skill-logo'
           />
-          </a>
-        {/* <div className="skill-title"> */}
-          {/* {skill.title} */}
-        {/* </div> */}
-
+        </a>
       </div>
     );
   });
