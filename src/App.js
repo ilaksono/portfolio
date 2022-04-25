@@ -1,10 +1,10 @@
 import NavBar from 'components/NavBar';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AppContext from 'AppContext';
 import { useCookies } from 'react-cookie';
 import 'styles/Background.scss';
 import Background from 'components/Background.js';
-
+import { navList, navKeys, navKeysNext, navKeysPrev } from 'hooks/useVisualMode';
 
 import LazyWrapper from 'components/LoadSpinner/LazyWrapper';
 
@@ -27,6 +27,7 @@ function App() {
     switchMode,
     history
   } = useContext(AppContext);
+  const [touchStart, setTouchStart] = useState(0);
   useEffect(() => {
     setCookie('mode', visMode, { path: '/' });
     // eslint-disable-next-line
@@ -40,8 +41,28 @@ function App() {
   }, []);
 
 
+
+  function handleTouchEnd(e) {
+    const touchEnd = e.changedTouches[0].clientX;
+    if (touchStart - touchEnd > 100) {
+      console.log('right')
+      switchMode(navList[navKeysNext[visMode]])
+    }
+
+    if (touchStart - touchEnd < -100) {
+      console.log('left')
+
+      switchMode(navList[navKeysPrev[visMode]])
+    }
+  }
+
+
   return (
-    <div className="App">
+    <div className="App"
+      // onScrollCapture={handleScroll}
+      onTouchEnd={handleTouchEnd}
+      onTouchStart={e => setTouchStart(e.touches[0].clientX)}
+    >
       <NavBar />
       <div className='nav-spacer'></div>
       {
