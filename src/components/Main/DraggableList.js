@@ -62,6 +62,7 @@ export default function DraggableList({ items }) {
                 title={items[i].title} key={i}
                 className='projects-iframe' src={items[i].url}
                 onLoad={() => setLoad(true)}
+                loading='lazy'
               >
 
               </iframe>

@@ -8,6 +8,10 @@
 .App {
   height: 100%;
 }
+a {
+  color: inherit !important;
+  color-interpolation-filters: auto;
+}
 
 // @media screen and (min-width: 851px) {
 //   #root {

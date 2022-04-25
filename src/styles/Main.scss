@@ -63,6 +63,23 @@
   // width: 100%;
   text-align: right;
   margin-bottom: 16px;
+  min-width: 75px;
+  min-height: 75px;
+  opacity: 0;
+
+  img {
+    min-width: 75px;
+    min-height:75px;
+
+  }
+  animation: fadeIn ease 1s forwards;
+}
+.work-list {
+  @for $item from 1 through 21 {
+    div:nth-of-type(#{$item}){ 
+      animation-delay: #{(0.5 + ($item/3))}s; 
+    }
+  }
 }
 .work-header {
   margin-bottom: 100px;

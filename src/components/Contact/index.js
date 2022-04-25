@@ -11,6 +11,7 @@ const Contact = (props) => {
             src='/IanLaksonoRe.pdf'
             className='res-embed'
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen
+            loading='lazy'
           >
           </iframe>
         </>

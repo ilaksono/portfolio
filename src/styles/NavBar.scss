@@ -9,7 +9,8 @@
   opacity: 0.9;
   padding-left: 55px;
   padding-right: 55px;
-  box-shadow: 0 0 4px 4px rgb(199, 199, 199)
+  box-shadow: 0 0 4px 4px rgb(199, 199, 199);
+  color-interpolation-filters: none;
 }
 
 
@@ -29,7 +30,7 @@
 .selected {
   border-radius: 50%;
   border: 2px solid rgb(177, 177, 177);
-  color: rgb(177, 177, 177);
+  color: rgb(177, 177, 177) !important;
   height: 60px;
   width: 60px;
   text-align: center;

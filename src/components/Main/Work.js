@@ -58,7 +58,10 @@ const Work = () => {
       <h2 className='main-title'>
         &lt;Companies&gt;
       </h2>
+      <div className='work-list'>
+
       {parsedWorks}
+      </div>
     </div>
   );
 };

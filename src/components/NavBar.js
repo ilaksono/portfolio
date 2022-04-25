@@ -32,6 +32,7 @@ const NavBar = () => {
           <a
           data-toggle='tooltip'
           title='Background'
+          href='#'
           >
 
           <i className="fas fa-user"></i>
@@ -49,6 +50,8 @@ const NavBar = () => {
         >
           <a data-toggle='tooltip'
           title='Work'
+         href='#'
+          
           >
 
           <i className="fas fa-briefcase"></i>
@@ -68,6 +71,7 @@ const NavBar = () => {
         >
           <a data-toggle='tooltip'
           title='Contact'
+          href='#'
           >
 
           <i className="fas fa-paper-plane"></i>
@@ -88,6 +92,7 @@ const NavBar = () => {
         >
           <a data-toggle='tooltip'
           title='Blog'
+          href='#'
           >
 
           <i className="fas fa-newspaper"></i>
