@@ -1,58 +1,69 @@
-@import './helpers.scss';
+@import "./helpers.scss";
 
 .specialty-layout::-webkit-scrollbar {
   width: 10px;
 }
- 
+
 .specialty-layout::-webkit-scrollbar-track {
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
 }
- 
-.specialty-layout::-webkit-scrollbar-thumb {
-  background-color:$darkp;
-  // outline: 1px solid slategrey;
-  border: 1px solid rgb(27, 6, 66);
-  border-radius: 10px;
 
+.specialty-layout::-webkit-scrollbar-thumb {
+  background-color: $darkp;
+  // outline: 1px solid slategrey;
+  // border: 1px solid rgb(27, 6, 66);
+  border-radius: 10px;
+  background-image: linear-gradient(111deg, #f2bf26, #b55eab);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: transparent;
 }
 .projects-layout::-webkit-scrollbar {
   width: 10px;
 }
- 
+
 .projects-layout::-webkit-scrollbar-track {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
 }
- 
+
 .projects-layout::-webkit-scrollbar-thumb {
   background-color: $darkp;
   // outline: 1px solid slategrey;
-  border: 1px solid rgb(20, 6, 51);
+  // border: 1px solid rgb(20, 6, 51);
   border-radius: 10px;
+  background-image: linear-gradient(111deg, #f2bf26, #b55eab);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: transparent;
 }
 .work-layout::-webkit-scrollbar {
   width: 4px;
 }
- 
+
 .work-layout::-webkit-scrollbar-track {
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
 }
- 
+
 .work-layout::-webkit-scrollbar-thumb {
-  background-color:$darkp;
+  background-color: $darkp;
   // outline: 1px solid slategrey;
-  border: 1px solid rgb(18, 7, 66);
+  // border: 1px solid rgb(18, 7, 66);
   border-radius: 10px;
+  background-image: linear-gradient(111deg, #f2bf26, #b55eab);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: transparent;
 }
 .res-embed-container::-webkit-scrollbar {
   width: 4px;
 }
- 
+
 .res-embed-container::-webkit-scrollbar-track {
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
 }
- 
+
 .res-embed-container::-webkit-scrollbar-thumb {
-  background-color:$darkp;
+  background-color: $darkp;
   // outline: 1px solid slategrey;
   border: 1px solid rgb(16, 8, 63);
   border-radius: 10px;
