@@ -36,7 +36,7 @@ function App() {
     if (cookies.mode)
       switchMode(cookies.mode);
     const node = document.querySelector('#load-overlay');
-    node.remove();
+    node?.remove();
   }, []);
 
 
@@ -72,10 +72,8 @@ function App() {
         visMode === 'CONTACT' &&
         <div>
           <LazyWrapper>
-
             <Contact
               pageAnim={history[history.length - 2] === 'ARTICLE' ? ' page-left' : ' page-right'}
-
             />
           </LazyWrapper>
         </div>
@@ -87,8 +85,8 @@ function App() {
         </LazyWrapper>
       }
       <Background />
-      <footer style={{ position: 'absolute', color: 'rgb(14, 8, 37)' }}>
-        2021 | Ian Laksono <i className="far fa-copyright"></i>
+      <footer style={{ position: 'absolute', color: 'rgb(14, 8, 37)', opacity: 0.7 }}>
+        {new Date().getFullYear()} | Ian Laksono <i className="far fa-copyright"></i>
       </footer>
     </div>
   );

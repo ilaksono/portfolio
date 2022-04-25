@@ -3,7 +3,8 @@ import {useState} from 'react';
 
 const workArr = [
   {
-    url: '/logo-smhm-large.png',
+    url: '/smhm.svg',
+    // '/logo-smhm-large.png',
     title: 'SeeMeHireMe',
     name: 'smhm'
   },

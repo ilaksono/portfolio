@@ -4,10 +4,15 @@ import projectsArr from 'data/projects';
 
 const Projects = () => {
   const fullList = [
+    // {
+    //   img: `url('/smhm.png')`,
+    //   title: 'SeeMeHireMe - Human Resource Innovator',
+    //   callback: () => window.open('https://seemehireme.com', '_blank', '')
+    // },
     {
-      img: `url('/smhm.png')`,
-      title: 'SeeMeHireMe Hiring Solutions',
-      callback: () => window.open('https://seemehireme.com', '_blank', '')
+      img: `url('/junglo.png')`,
+      title: 'Junglo - Stock Insights',
+      callback: () => window.open('https://junglo.xyz', '_blank', '')
     },
     ...projectsArr,
     {
@@ -33,13 +38,13 @@ const Projects = () => {
         &lt;Projects&gt;
       </h2>
       <div className='current-proj'>
-        <div className='each-project' onClick={() => window.open('http://junglo.xyz', '_blank', '')}>
+        <div className='each-project' onClick={() => window.open('http://seemehireme.com', '_blank', '')}>
           <div className='current-text'>CURRENTLY BUILDING</div>
           <a>
-            <div className='current-text'> JUNGLO <i className="fas fa-signal"></i></div>
+            <div className='current-text'> SeeMeHireMe - Human Resource Innovator <i className="fas fa-user"></i></div>
           </a>
-          <div style={{ backgroundImage: `url('/junglo.png')` }} src='/Chart-Page (1).png'
-            alt='battleship' className='jungle-screen'></div>
+          <div style={{ backgroundImage: `url('/smhm.png')` }} 
+            className='jungle-screen'></div>
         </div>
         <div className='projects-closing'>
           <a href='https://github.com/ilaksono' style={{ color: '#254a02' }}>

@@ -6,8 +6,8 @@ const Specialty = () => {
       <div className='skill-item' key={skill.title}
         style={{
           borderColor: (index === 3
-            || index === 7 || index === 10 || index === 13 || index === 16) ? '#eaeaea' : '',
-          borderBottomWidth: (index === 3 || index === 7 || index === 10 || index === 13 || index === 16) ? "2px" : "0px",
+            || index === 8 || index === 11 || index === 13 || index === 16) ? '#eaeaea' : '',
+          borderBottomWidth: (index === 3 || index === 8 || index === 11 || index === 13 || index === 16) ? "2px" : "0px",
           borderBottomStyle: "solid"
         }}
       >
