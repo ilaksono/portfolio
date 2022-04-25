@@ -45,12 +45,10 @@ function App() {
   function handleTouchEnd(e) {
     const touchEnd = e.changedTouches[0].clientX;
     if (touchStart - touchEnd > 100) {
-      console.log('right')
       switchMode(navList[navKeysNext[visMode]])
     }
 
     if (touchStart - touchEnd < -100) {
-      console.log('left')
 
       switchMode(navList[navKeysPrev[visMode]])
     }
