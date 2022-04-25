@@ -23,7 +23,7 @@ const Articles = () => {
 
   return (
     <div className='articles-layout page-right'>
-      <h2 className='main-title'>&lt;Article&gt;</h2>
+      <h2 className='main-title'>&lt;Blog&gt;</h2>
 
       <div
         className='articles-container'>

@@ -29,7 +29,13 @@ const NavBar = () => {
           }}
           onAnimationEnd={() => setAnim({ ...anim, meSpin: false })}
         >
+          <a
+          data-toggle='tooltip'
+          title='Background'
+          >
+
           <i className="fas fa-user"></i>
+          </a>
         </div>
       </div>
       <div className={visMode === 'MAIN' ? 'selected' : 'not-selected'}>
@@ -41,7 +47,12 @@ const NavBar = () => {
           }}
           onAnimationEnd={() => setAnim({ ...anim, mainSpin: false })}
         >
+          <a data-toggle='tooltip'
+          title='Work'
+          >
+
           <i className="fas fa-briefcase"></i>
+          </a>
         </div>
       </div>
       <div
@@ -55,13 +66,19 @@ const NavBar = () => {
           }}
           onAnimationEnd={() => setAnim({ ...anim, mailSpin: false })}
         >
+          <a data-toggle='tooltip'
+          title='Contact'
+          >
+
           <i className="fas fa-paper-plane"></i>
+          </a>
         </div>
       </div>
       <div
         className={visMode === 'ARTICLE' ? 'selected' : 'not-selected'}
       >
         <div
+        
           className={`about-me-logo${anim.newsSpin ? ' nav-spin' : ''}`}
           onClick={() => {
             switchMode('ARTICLE');
@@ -69,7 +86,12 @@ const NavBar = () => {
           }}
           onAnimationEnd={() => setAnim({ ...anim, newsSpin: false })}
         >
+          <a data-toggle='tooltip'
+          title='Blog'
+          >
+
           <i className="fas fa-newspaper"></i>
+          </a>
         </div>
       </div>
     </nav>

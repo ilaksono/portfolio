@@ -15,6 +15,7 @@
   @include flexbox(row, center, center);
   margin-left: 10px;
   margin-right: 10px;
+  min-height: 390px;
 }
 
 .art-container {

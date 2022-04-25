@@ -101,14 +101,14 @@ $f: 0.25;
   }
 }
 .prof-pic-container {
-  background-color: #ddd;
+  // background-color: #ddd;
   padding: 5px;
-  border-radius: 28px;
+  // border-radius: 28px;
   opacity: 0;
   animation: hideInitial 3s 1 forwards;
 }
 .prof-pic {
-  border-radius: 50%;
+  border-radius: 12px;
   height: 140px;
   width: 140px;
   cursor: pointer;
