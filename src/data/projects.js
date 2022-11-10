@@ -5,7 +5,7 @@ const projectsArr = [
     git: 'https://github.com/ilaksono/shoppies-react-express'
   },
   {
-    url: 'https://laksmail.herokuapp.com/',
+    url: 'https://emai-me-il.onrender.com/',
     title: 'Email Me - React Server Side Render',
     git: 'https://github.com/ilaksono/email-api-node'
   },

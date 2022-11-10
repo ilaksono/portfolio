@@ -67,7 +67,7 @@ export default function DraggableList({ items }) {
 
               </iframe>
             </div> :
-              <div className='each-project' onClick={() => items[i].callback ? items[i].callback() : window.open(items[i].git, '_blank', '')}>
+              <div className='each-project'>
 
                 <div className='project-label-container'>
                   <a className='projects-label' href={items[i].git}>{items[i].title}</a>
@@ -79,7 +79,9 @@ export default function DraggableList({ items }) {
                     ></i>
                   }
                 </div>
-                <div style={{ backgroundImage: items[i].img, }}
+                <div 
+                 onClick={() => items[i].callback ? items[i].callback() : window.open(items[i].git, '_blank', '')}
+                style={{ backgroundImage: items[i].img, }}
                   className='jungle-screen'></div>
               </div>
             }
