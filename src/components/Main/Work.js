@@ -3,33 +3,37 @@ import {useState} from 'react';
 
 const workArr = [
   {
+    url: '/dss-icon.webp',
+    title: 'Dana Safety Supply',
+    name: 'DSS'
+  },
+  {
     url: '/smhm.svg',
-    // '/logo-smhm-large.png',
     title: 'SeeMeHireMe',
     name: 'smhm'
   },
   {
-    url: 'https://cdn.imweb.me/thumbnail/20210320/1e3942eeb16ce.png',
+    url: 'junglo-icon.webp',
     title:'Junglo',
     name:'junglo'
   },
   {
-    url: 'https://coursereport-production.imgix.net/uploads/school/logo/46/original/lighthouse-labs-logo-compressor.png?w=200&h=200',
+    url: '/lighthouse-icon.webp',
     title: 'Lighthouse Labs',
     name:'lhl'
   },
   {
-    url: '/arima.png',
+    url: '/arima.webp',
     title: 'Arima Inc.',
     name:'arima'
   },
   {
-    url: 'https://johnhoward.ca/wp-content/uploads/2016/12/Certification-Mark-color.jpg',
+    url: '/john-icon.webp',
     title: 'John Howard Society',
     name: 'jhs'
   },
   {
-    url: 'https://media.glassdoor.com/sqll/10840/amec-foster-wheeler-squarelogo-1432286081401.png',
+    url: '/amec-icon.webp',
     title: 'Amec Foster Wheeler',
     name: 'afw'
   }

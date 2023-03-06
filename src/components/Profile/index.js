@@ -68,7 +68,7 @@ const Profile = (props) => {
             }}
             onAnimationStart={() => setVisible(prev => ({ ...prev, a: true }))}
           >
-            Web Developer with natural talent
+            Full Stack Developer with natural talent
           </h4>
           <h5 className='h4-1'
             style={{
@@ -76,7 +76,7 @@ const Profile = (props) => {
             }}
             onAnimationStart={() => setVisible(prev => ({ ...prev, b: true }))}
           >
-            Background in Chemical Engineering
+            Specializes in Creative Solutions
           </h5>
           <h6 className='h6-1'
             style={{
@@ -111,7 +111,7 @@ const Profile = (props) => {
 
                     <div className="role">
                       <div className="block"></div>
-                      <p>Full Stack Developer</p>
+                      <p>&nbsp;</p>
                     </div>
 
                   </div>
@@ -137,7 +137,7 @@ const Profile = (props) => {
       <div className='assembly-wrapper'>
 
       <div className="assembly" style={{"--dx": 0}}>
-        <div className="panel first" style={{"--i": 0, "--k": 0.25, "--p": 0, "--dx": 0, "--dz": -0.2}}></div>
+        <div className="panel first" style={{"--i": 0, "--k": 0.33, "--p": 0, "--dx": 0, "--dz": -0.2}}></div>
         <div className="panel second" style={{"--i": 1, "--k": 0.5, "--p": 0.25, "--dx": -0.1, "--dz": 0}}></div>
         <div className="panel third" style={{"--i": 2, "--k": 0.25, "--p": 0.75, "--dx": 0, "--dz": 0}}></div>
       </div>

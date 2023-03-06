@@ -217,7 +217,7 @@
 @media screen and (min-width: 1031px) {
   .containerA {
     width: 40%;
-    margin-left: 120px;
+    margin-left: 90px;
   }
 }
 @media (max-width: 1030px) and (min-width: 501px) {
@@ -225,7 +225,8 @@
 }
 @media screen and (max-width: 500px) {
   .containerA {
-    left: 17px;
-    padding-left: 37px;
+    left: 0;
+    padding-left: 0;
+    width: 65%;
   }
 }

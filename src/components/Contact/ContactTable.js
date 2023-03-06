@@ -59,9 +59,8 @@ const ContactTable = () => {
         >
           <i className="fas fa-envelope" >: </i>
         </div>
-        <a href="#email"
+        <a href="mailto:ian@laksono.net"
           className='contact-link'
-          onClick={() => switchMode('MAIN')}
           >
           &nbsp;ian@laksono.net
         </a>

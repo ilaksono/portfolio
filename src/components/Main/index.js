@@ -12,8 +12,7 @@ const Main = (props) => {
   return (
     <div className={`main-layout${props.pageAnim}`}>
       <Work />
-      <LazyWrapper
-      >
+      <LazyWrapper>
         <Projects />
       </LazyWrapper>
       <Specialty />

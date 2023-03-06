@@ -66,8 +66,9 @@
   min-width: 75px;
   min-height: 75px;
   opacity: 0;
-
+  
   img {
+    padding: 4px;
     min-width: 75px;
     min-height:75px;
 
@@ -80,6 +81,10 @@
       animation-delay: #{(0.5 + ($item/3))}s; 
     }
   }
+}
+.current-project {
+  background-size: cover;
+
 }
 .work-header {
   margin-bottom: 100px;
@@ -102,7 +107,7 @@
   height: 260px;
   border: 2px solid rgb(197, 197, 197);
   border-right: 3px solid rgb(197, 197, 197);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   transition: transform 300ms;
@@ -148,6 +153,7 @@
 .current-proj {
   // background-color: #f2f2f2;
   width: 99%;
+  padding: 8px;
   // box-shadow: -2px 0 4px 2px grey;
   font-family: $font-stack;
 }
